@@ -15,6 +15,11 @@ CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
 MODEL_LIST = [
+    "openai/gpt-oss-20b",
+    "aisingapore/gemma-sea-lion-v4-27b-it",
+    "qwen/qwen3-30b-a3b-fp8",
+    "openai/gpt-oss-120b",
+    "mistralai/mistral-small-3.1-24b-instruct",
     "meta/llama-3.1-8b-instruct-fast",
     "meta/llama-4-scout-17b-16e-instruct",
     "meta/llama-3.2-3b-instruct"
@@ -329,7 +334,10 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
     
     if execution_result.get("success"):
         #print(execution_result["result"])
-        llm_response_text = execution_result["result"]["response"]
+        if "response" in execution_result["result"].keys():
+            llm_response_text = execution_result["result"]["response"]
+        else:
+            llm_response_text = execution_result["result"]["choices"][0]["message"]["content"]
         response_memor_object = Response(message=str(llm_response_text))
         session_memor.add_message(response_memor_object)
         return llm_response_text
@@ -407,7 +415,7 @@ def save_game_prediction_and_session(
 
 
 if __name__ == "__main__":
-    current_phase = "knockout" 
+    current_phase = "group" 
     raw_game_id = "WC2026-G01"
     game_id = raw_game_id.replace("WC2026-", "") if "WC2026-" in raw_game_id else raw_game_id
     
