@@ -407,7 +407,7 @@ def save_game_prediction_and_session(
 
 
 if __name__ == "__main__":
-    current_phase = "knockout" 
+    current_phase = "group" 
     raw_game_id = "WC2026-G01"
     game_id = raw_game_id.replace("WC2026-", "") if "WC2026-" in raw_game_id else raw_game_id
     
