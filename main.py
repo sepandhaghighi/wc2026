@@ -15,6 +15,7 @@ CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
 MODEL_LIST = [
+    "mistralai/mistral-small-3.1-24b-instruct",
     "meta/llama-3.1-8b-instruct-fast",
     "meta/llama-4-scout-17b-16e-instruct",
     "meta/llama-3.2-3b-instruct"
