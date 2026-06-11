@@ -1,0 +1,33 @@
+{
+    "game_id": "G02",
+    "simulation_env": {
+        "timestamp": "2026-06-11T21:45:00.689589Z",
+        "model": "openai/gpt-oss-20b",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "home_team": "South Korea",
+        "away_team": "Czech Republic",
+        "host_country": "Mexico"
+    },
+    "prediction": {
+        "probabilities": {
+            "home_win": 0.33,
+            "draw": 0.27,
+            "away_win": 0.4
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "South Korea",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.55
+    }
+}
