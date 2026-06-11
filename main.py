@@ -416,11 +416,11 @@ def save_game_prediction_and_session(
 
 if __name__ == "__main__":
     current_phase = "group" 
-    raw_game_id = "WC2026-G01"
+    raw_game_id = "WC2026-G02"
     game_id = raw_game_id.replace("WC2026-", "") if "WC2026-" in raw_game_id else raw_game_id
     
-    country_a = "Mexico"
-    country_b = "South Africa"
+    country_a = "South Korea"
+    country_b = "Czech Republic"
     match_host = "Mexico"
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
