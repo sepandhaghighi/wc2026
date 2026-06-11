@@ -15,6 +15,7 @@ CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
 MODEL_LIST = [
+    "openai/gpt-oss-20b",
     "aisingapore/gemma-sea-lion-v4-27b-it",
     "qwen/qwen3-30b-a3b-fp8",
     "openai/gpt-oss-120b",

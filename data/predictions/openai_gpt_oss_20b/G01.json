@@ -1,0 +1,33 @@
+{
+    "game_id": "G01",
+    "simulation_env": {
+        "timestamp": "2026-06-11T20:18:22.341192Z",
+        "model": "openai/gpt-oss-20b",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "home_team": "Mexico",
+        "away_team": "South Africa",
+        "host_country": "Mexico"
+    },
+    "prediction": {
+        "probabilities": {
+            "home_win": 0.65,
+            "draw": 0.2,
+            "away_win": 0.15
+        },
+        "predicted_score": "2-0",
+        "predicted_winner": "Mexico",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.75
+    }
+}
