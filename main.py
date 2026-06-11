@@ -15,6 +15,7 @@ CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
 MODEL_LIST = [
+    "openai/gpt-oss-120b",
     "mistralai/mistral-small-3.1-24b-instruct",
     "meta/llama-3.1-8b-instruct-fast",
     "meta/llama-4-scout-17b-16e-instruct",
@@ -330,7 +331,10 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
     
     if execution_result.get("success"):
         #print(execution_result["result"])
-        llm_response_text = execution_result["result"]["response"]
+        if "response" in execution_result["result"].keys():
+            llm_response_text = execution_result["result"]["response"]
+        else:
+            llm_response_text = execution_result["result"]["choices"][0]["message"]["content"]
         response_memor_object = Response(message=str(llm_response_text))
         session_memor.add_message(response_memor_object)
         return llm_response_text
