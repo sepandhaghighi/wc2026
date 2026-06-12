@@ -3,6 +3,7 @@ import json
 import time
 import pandas as pd
 import requests
+from enum import Enum
 from datetime import datetime
 from pathlib import Path
 from requests.adapters import HTTPAdapter
@@ -10,7 +11,65 @@ from urllib3.util import Retry
 from pprint import pprint
 from memor import *
 
+class Phase(Enum):
+    GROUP = "group"
+    KNOCKOUT = "knockout"
 
+
+class Team(Enum):
+    MEXICO = "Mexico"
+    SOUTH_AFRICA = "South Africa"
+    SOUTH_KOREA = "South Korea"
+    CZECH_REPUBLIC = "Czech Republic"
+    CANADA = "Canada"
+    BOSNIA_AND_HERZEGOVINA = "Bosnia and Herzegovina"
+    USA = "United States"
+    PARAGUAY = "Paraguay"
+    QATAR = "Qatar"
+    SWITZERLAND = "Switzerland"
+    BRAZIL = "Brazil"
+    MOROCCO = "Morocco"
+    HAITI = "Haiti"
+    SCOTLAND = "Scotland"
+    AUSTRALIA = "Australia"
+    TURKEY = "Turkey"
+    GERMANY = "Germany"
+    CURACAO = "Curaçao"
+    IVORY_COAST = "Ivory Coast"
+    ECUADOR = "Ecuador"
+    NETHERLANDS = "Netherlands"
+    JAPAN = "Japan"
+    SWEDEN = "Sweden"
+    TUNISIA = "Tunisia"
+    BELGIUM = "Belgium"
+    EGYPT = "Egypt"
+    IRAN = "Iran"
+    NEW_ZEALAND = "New Zealand"
+    SPAIN = "Spain"
+    CAPE_VERDE = "Cape Verde"
+    SAUDI_ARABIA = "Saudi Arabia"
+    URUGUAY = "Uruguay"
+    FRANCE = "France"
+    SENEGAL = "Senegal"
+    IRAQ = "Iraq"
+    NORWAY = "Norway"
+    ARGENTINA = "Argentina"
+    ALGERIA = "Algeria"
+    AUSTRIA = "Austria"
+    JORDAN = "Jordan"
+    PORTUGAL = "Portugal"
+    DR_CONGO = "DR Congo"
+    UZBEKISTAN = "Uzbekistan"
+    COLOMBIA = "Colombia"
+    ENGLAND = "England"
+    CROATIA = "Croatia"
+    GHANA = "Ghana"
+    PANAMA = "Panama"
+
+class Host(Enum):
+    USA = "United States"
+    MEXICO = "Mexico"
+    CANADA = "Canada"
 CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
@@ -415,13 +474,13 @@ def save_game_prediction_and_session(
 
 
 if __name__ == "__main__":
-    current_phase = "group" 
+    current_phase = Phase.GROUP.value 
     raw_game_id = "WC2026-G02"
     game_id = raw_game_id.replace("WC2026-", "") if "WC2026-" in raw_game_id else raw_game_id
     
-    country_a = "South Korea"
-    country_b = "Czech Republic"
-    match_host = "Mexico"
+    country_a = TEAM.SOUTH_KOREA.value
+    country_b = TEAM.CZECH_REPUBLIC.value
+    match_host = HOST.MEXICO.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
     team_b_metrics = fetch_true_national_team_form(international_results_df, country_b, last_n=15)
