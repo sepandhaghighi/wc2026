@@ -11,15 +11,15 @@
     "match_context": {
         "tournament": "FIFA World Cup 2026",
         "phase": "group",
-        "home_team": "Mexico",
-        "away_team": "South Africa",
+        "team_a": "Mexico",
+        "team_b": "South Africa",
         "host_country": "Mexico"
     },
     "prediction": {
         "probabilities": {
-            "home_win": 0.65,
+            "team_a_win": 0.65,
             "draw": 0.25,
-            "away_win": 0.1
+            "team_b_win": 0.1
         },
         "predicted_score": "2-1",
         "predicted_winner": "Mexico",

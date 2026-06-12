@@ -11,8 +11,8 @@
     "match_context": {
         "tournament": "FIFA World Cup 2026",
         "phase": "group",
-        "home_team": "South Korea",
-        "away_team": "Czech Republic",
+        "team_a": "South Korea",
+        "team_b": "Czech Republic",
         "host_country": "Mexico"
     },
     "prediction": {
@@ -25,9 +25,9 @@
         "predicted_score": "1-1",
         "predicted_winner": "Draw",
         "probabilities": {
-            "away_win": 0.35,
+            "team_b_win": 0.35,
             "draw": 0.3,
-            "home_win": 0.35
+            "team_a_win": 0.35
         }
     }
 }
