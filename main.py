@@ -44,6 +44,22 @@ class Team(Enum):
     CAPE_VERDE = "Cape Verde"
     SAUDI_ARABIA = "Saudi Arabia"
     URUGUAY = "Uruguay"
+    FRANCE = "France"
+    SENEGAL = "Senegal"
+    IRAQ = "Iraq"
+    NORWAY = "Norway"
+    ARGENTINA = "Argentina"
+    ALGERIA = "Algeria"
+    AUSTRIA = "Austria"
+    JORDAN = "Jordan"
+    PORTUGAL = "Portugal"
+    DR_CONGO = "DR Congo"
+    UZBEKISTAN = "Uzbekistan"
+    COLOMBIA = "Colombia"
+    ENGLAND = "England"
+    CROATIA = "Croatia"
+    GHANA = "Ghana"
+    PANAMA = "Panama"
 CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
