@@ -3,6 +3,7 @@ import json
 import time
 import pandas as pd
 import requests
+from enum import Enum
 from datetime import datetime
 from pathlib import Path
 from requests.adapters import HTTPAdapter
@@ -10,7 +11,39 @@ from urllib3.util import Retry
 from pprint import pprint
 from memor import *
 
-
+class Team(Enum):
+    MEXICO = "Mexico"
+    SOUTH_AFRICA = "South Africa"
+    SOUTH_KOREA = "South Korea"
+    CZECH_REPUBLIC = "Czech Republic"
+    CANADA = "Canada"
+    BOSNIA_AND_HERZEGOVINA = "Bosnia and Herzegovina"
+    USA = "United States"
+    PARAGUAY = "Paraguay"
+    QATAR = "Qatar"
+    SWITZERLAND = "Switzerland"
+    BRAZIL = "Brazil"
+    MOROCCO = "Morocco"
+    HAITI = "Haiti"
+    SCOTLAND = "Scotland"
+    AUSTRALIA = "Australia"
+    TURKEY = "Turkey"
+    GERMANY = "Germany"
+    CURACAO = "Curaçao"
+    IVORY_COAST = "Ivory Coast"
+    ECUADOR = "Ecuador"
+    NETHERLANDS = "Netherlands"
+    JAPAN = "Japan"
+    SWEDEN = "Sweden"
+    TUNISIA = "Tunisia"
+    BELGIUM = "Belgium"
+    EGYPT = "Egypt"
+    IRAN = "Iran"
+    NEW_ZEALAND = "New Zealand"
+    SPAIN = "Spain"
+    CAPE_VERDE = "Cape Verde"
+    SAUDI_ARABIA = "Saudi Arabia"
+    URUGUAY = "Uruguay"
 CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
