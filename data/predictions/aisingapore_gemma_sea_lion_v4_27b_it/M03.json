@@ -1,5 +1,5 @@
 {
-    "game_id": "M03",
+    "match_id": "M03",
     "simulation_env": {
         "timestamp": "2026-06-12T18:54:57.550440Z",
         "model": "aisingapore/gemma-sea-lion-v4-27b-it",

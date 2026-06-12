@@ -1,5 +1,5 @@
 {
-    "game_id": "M04",
+    "match_id": "M04",
     "simulation_env": {
         "timestamp": "2026-06-12T21:49:51.789146Z",
         "model": "qwen/qwen3-30b-a3b-fp8",
