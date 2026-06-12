@@ -86,7 +86,7 @@ MODEL_LIST = [
 
 TEMPERATURE = 0.0
 TOP_P = 1.0
-MAX_TOKENS = 1000
+MAX_TOKENS = 2000
 
 
 REGISTRY_URL = "https://raw.githubusercontent.com/zvizdo/fifa-wc-2026-simulation/main/data/wc_2026_teams.json"
@@ -476,12 +476,12 @@ def save_game_prediction_and_session(
 
 if __name__ == "__main__":
     current_phase = Phase.GROUP.value 
-    raw_game_id = "WC2026-G02"
+    raw_game_id = "WC2026-G03"
     game_id = raw_game_id.replace("WC2026-", "") if "WC2026-" in raw_game_id else raw_game_id
     
-    country_a = TEAM.SOUTH_KOREA.value
-    country_b = TEAM.CZECH_REPUBLIC.value
-    match_host = HOST.MEXICO.value
+    country_a = Team.CANADA.value
+    country_b = Team.BOSNIA_AND_HERZEGOVINA.value
+    match_host = Host.CANADA.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
     team_b_metrics = fetch_true_national_team_form(international_results_df, country_b, last_n=15)

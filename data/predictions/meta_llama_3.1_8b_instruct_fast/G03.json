@@ -1,0 +1,34 @@
+{
+    "game_id": "G03",
+    "simulation_env": {
+        "timestamp": "2026-06-12T18:55:41.755908Z",
+        "model": "meta/llama-3.1-8b-instruct-fast",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 2000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Canada",
+        "team_b": "Bosnia and Herzegovina",
+        "host_country": "Canada"
+    },
+    "prediction": {
+        "confidence": 0.8,
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "predicted_score": "1-0",
+        "predicted_winner": "Canada",
+        "probabilities": {
+            "draw": 0.25,
+            "team_a_win": 0.55,
+            "team_b_win": 0.2
+        }
+    }
+}
