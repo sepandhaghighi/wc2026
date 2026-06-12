@@ -447,7 +447,8 @@ def save_game_prediction_and_session(
             "model": model_name,
             "hyperparameters": {
                 "temperature": match_meta["temperature"],
-                "top_p": match_meta["top_p"]
+                "top_p": match_meta["top_p"],
+                "max_tokens": match_meta["max_tokens"]
             },
         },
         "match_context": {
@@ -534,7 +535,8 @@ if __name__ == "__main__":
                 "team_b": country_b,
                 "host_country": match_host,
                 "temperature": TEMPERATURE,
-                "top_p": TOP_P
+                "top_p": TOP_P,
+                "max_tokens": MAX_TOKENS
             }
             
             save_game_prediction_and_session(
