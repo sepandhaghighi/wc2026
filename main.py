@@ -403,22 +403,22 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
 
 
 
-def check_game_id_exists(game_id: str, model_name: str) -> bool:
+def check_match_id_exists(match_id: str, model_name: str) -> bool:
     """
-    Checks if historical predictions or execution sessions already exist for a given game ID and model.
+    Checks if historical predictions or execution sessions already exist for a given match ID and model.
 
-    :param game_id: Clean parsed alphanumeric identifier for the simulation.
+    :param match_id: Clean parsed alphanumeric identifier for the simulation.
     :param model_name: Name of the active LLM being evaluated.
     :return: True if either the prediction or session archive file already exists, False otherwise.
     """
     safe_model_name = model_name.replace("@", "").replace("/", "_").replace("-", "_")
-    pred_file = PREDICTIONS_ROOT / safe_model_name / f"{game_id}.json"
-    sess_file = SESSIONS_ROOT / safe_model_name / f"{game_id}.json"
+    pred_file = PREDICTIONS_ROOT / safe_model_name / f"{match_id}.json"
+    sess_file = SESSIONS_ROOT / safe_model_name / f"{match_id}.json"
     return pred_file.exists() or sess_file.exists()
 
 
-def save_game_prediction_and_session(
-    game_id: str, 
+def save_match_prediction_and_session(
+    match_id: str, 
     model_name: str, 
     match_meta: dict, 
     prediction_data: dict, 
@@ -427,7 +427,7 @@ def save_game_prediction_and_session(
     """
     Saves clean prediction responses and stateful Memor sessions into isolated, reproducible directories.
 
-    :param game_id: Clean parsed alphanumeric identifier for the simulation.
+    :param match_id: Clean parsed alphanumeric identifier for the simulation.
     :param model_name: Name of the active LLM being evaluated.
     :param match_meta: Metadata contextual tracking parameters.
     :param prediction_data: Structured JSON output block delivered by the LLM pipeline.
@@ -436,10 +436,10 @@ def save_game_prediction_and_session(
     safe_model_name = model_name.replace("@", "").replace("/", "_").replace("-", "_")
     target_prediction_directory = PREDICTIONS_ROOT / safe_model_name
     target_prediction_directory.mkdir(parents=True, exist_ok=True)
-    destination_prediction_file = target_prediction_directory / f"{game_id}.json"
+    destination_prediction_file = target_prediction_directory / f"{match_id}.json"
     
     output_payload = {
-        "game_id": game_id,
+        "match_id": match_id,
         "simulation_env": {
             "timestamp": datetime.utcnow().isoformat() + "Z",
             "model": model_name,
@@ -465,7 +465,7 @@ def save_game_prediction_and_session(
     print(f"[SUCCESS] Clean inference output archived at: {destination_prediction_file}")
     target_session_directory = SESSIONS_ROOT / safe_model_name
     target_session_directory.mkdir(parents=True, exist_ok=True)
-    destination_session_file = target_session_directory / f"{game_id}.json"
+    destination_session_file = target_session_directory / f"{match_id}.json"
     
     session_memor.save(str(destination_session_file))
     print(f"[SUCCESS] Authoritative execution session archived at: {destination_session_file}")
@@ -474,8 +474,8 @@ def save_game_prediction_and_session(
 
 if __name__ == "__main__":
     current_phase = Phase.GROUP.value 
-    raw_game_id = "WC2026-G04"
-    game_id = raw_game_id.replace("WC2026-", "") if "WC2026-" in raw_game_id else raw_game_id
+    raw_match_id = "WC2026-M04"
+    match_id = raw_match_id.replace("WC2026-", "") if "WC2026-" in raw_match_id else raw_match_id
     
     country_a = Team.USA.value
     country_b = Team.PARAGUAY.value
@@ -502,8 +502,8 @@ if __name__ == "__main__":
 
     for current_model in MODEL_LIST:
         print(f"\n--- [START] Starting Evaluation Loop for: {current_model} ---")
-        if check_game_id_exists(game_id, current_model):
-            print(f"[WARNING] Simulation records for Game ID '{game_id}' using model '{current_model}' already exist. Existing logs will be overwritten.")
+        if check_match_id_exists(match_id, current_model):
+            print(f"[WARNING] Simulation records for Match ID '{match_id}' using model '{current_model}' already exist. Existing logs will be overwritten.")
 
         try:
             system_prompt_obj = Prompt(message=system_prompt_text, role=Role.SYSTEM)
@@ -537,8 +537,8 @@ if __name__ == "__main__":
                 "max_tokens": MAX_TOKENS
             }
             
-            save_game_prediction_and_session(
-                game_id=game_id,
+            save_match_prediction_and_session(
+                match_id=match_id,
                 model_name=current_model,
                 match_meta=match_metadata_summary,
                 prediction_data=final_json_data,
