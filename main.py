@@ -11,6 +11,11 @@ from urllib3.util import Retry
 from pprint import pprint
 from memor import *
 
+class Phase(Enum):
+    GROUP = "group"
+    KNOCKOUT = "knockout"
+
+
 class Team(Enum):
     MEXICO = "Mexico"
     SOUTH_AFRICA = "South Africa"
