@@ -1,5 +1,5 @@
 {
-    "game_id": "G03",
+    "game_id": "M03",
     "simulation_env": {
         "timestamp": "2026-06-12T18:55:38.913511Z",
         "model": "mistralai/mistral-small-3.1-24b-instruct",

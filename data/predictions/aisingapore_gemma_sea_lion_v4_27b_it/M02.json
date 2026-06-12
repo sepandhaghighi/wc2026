@@ -1,5 +1,5 @@
 {
-    "game_id": "G02",
+    "game_id": "M02",
     "simulation_env": {
         "timestamp": "2026-06-11T21:45:04.667379Z",
         "model": "aisingapore/gemma-sea-lion-v4-27b-it",

@@ -1,5 +1,5 @@
 {
-    "game_id": "G01",
+    "game_id": "M01",
     "simulation_env": {
         "timestamp": "2026-06-11T18:58:12.585315Z",
         "model": "meta/llama-3.2-3b-instruct",
