@@ -5,7 +5,8 @@
         "model": "aisingapore/gemma-sea-lion-v4-27b-it",
         "hyperparameters": {
             "temperature": 0.0,
-            "top_p": 1.0
+            "top_p": 1.0,
+            "max_tokens": 1000
         }
     },
     "match_context": {
