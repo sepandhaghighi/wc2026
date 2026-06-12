@@ -89,7 +89,7 @@ TOP_P = 1.0
 MAX_TOKENS = 2000
 
 
-REGISTRY_URL = "https://raw.githubusercontent.com/zvizdo/fifa-wc-2026-simulation/main/data/wc_2026_teams.json"
+REGISTRY_PATH = "wc_2026_teams.json"
 HISTORICAL_RESULTS_URL = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
 
 
@@ -127,9 +127,7 @@ def fetch_world_cup_registry() -> dict:
     """
     print("[INFO] Synchronizing authoritative World Cup 2026 team registration profiles...")
     try:
-        response = network_session.get(REGISTRY_URL, timeout=100)
-        response.raise_for_status()
-        raw_registry_data = response.json()
+        raw_registry_data = json.load(open(REGISTRY_PATH, "r"))
         
         team_registry = {}
         if isinstance(raw_registry_data, dict):
