@@ -292,17 +292,17 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
     if match_phase == "group":
         probability_schema = (
             "  \"probabilities\": {\n"
-            "    \"home_win\": float, # Probability of team A winning in normal time\n"
+            "    \"team_a_win\": float, # Probability of team A winning in normal time\n"
             "    \"draw\": float, # Probability of a draw outcome in normal time\n"
-            "    \"away_win\": float # Probability of team B winning in normal time\n"
+            "    \"team_b_win\": float # Probability of team B winning in normal time\n"
             "  },"
         )
         outcome_rules = "A group match can end in a Win, Loss, or Draw at the conclusion of normal time."
     else:
         probability_schema = (
             "  \"probabilities\": {\n"
-            "    \"home_advance\": float, # Total cumulative probability of team A advancing\n"
-            "    \"away_advance\": float # Total cumulative probability of team B advancing\n"
+            "    \"team_a_advance\": float, # Total cumulative probability of team A advancing\n"
+            "    \"team_b_advance\": float # Total cumulative probability of team B advancing\n"
             "  },"
         )
         outcome_rules = (
@@ -333,8 +333,8 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
         "Tournament Phase Context: {phase}\n"
         "Phase Resolution Rules: {rules}\n"
         "Designated Match Host Country: {host}\n\n"
-        "National Team A (Home/Designated):\n{team_a}\n\n"
-        "National Team B (Away/Designated):\n{team_b}\n\n"
+        "National Team A:\n{team_a}\n\n"
+        "National Team B:\n{team_b}\n\n"
         "Synthesize probabilities and output raw JSON matching the target schema."
     ).format(
         phase=match_phase.upper(),
@@ -447,14 +447,15 @@ def save_game_prediction_and_session(
             "model": model_name,
             "hyperparameters": {
                 "temperature": match_meta["temperature"],
-                "top_p": match_meta["top_p"]
+                "top_p": match_meta["top_p"],
+                "max_tokens": match_meta["max_tokens"]
             },
         },
         "match_context": {
             "tournament": match_meta["tournament"],
             "phase": match_meta["match_phase"],
-            "home_team": match_meta["home_team"],
-            "away_team": match_meta["away_team"],
+            "team_a": match_meta["team_a"],
+            "team_b": match_meta["team_b"],
             "host_country": match_meta["host_country"]
         },
         "prediction": prediction_data
@@ -530,11 +531,12 @@ if __name__ == "__main__":
             match_metadata_summary = {
                 "tournament": "FIFA World Cup 2026",
                 "match_phase": current_phase,
-                "home_team": country_a,
-                "away_team": country_b,
+                "team_a": country_a,
+                "team_b": country_b,
                 "host_country": match_host,
                 "temperature": TEMPERATURE,
-                "top_p": TOP_P
+                "top_p": TOP_P,
+                "max_tokens": MAX_TOKENS
             }
             
             save_game_prediction_and_session(

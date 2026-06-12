@@ -5,21 +5,22 @@
         "model": "meta/llama-4-scout-17b-16e-instruct",
         "hyperparameters": {
             "temperature": 0.0,
-            "top_p": 1.0
+            "top_p": 1.0,
+            "max_tokens": 1000
         }
     },
     "match_context": {
         "tournament": "FIFA World Cup 2026",
         "phase": "group",
-        "home_team": "Mexico",
-        "away_team": "South Africa",
+        "team_a": "Mexico",
+        "team_b": "South Africa",
         "host_country": "Mexico"
     },
     "prediction": {
         "probabilities": {
-            "home_win": 0.58,
+            "team_a_win": 0.58,
             "draw": 0.24,
-            "away_win": 0.18
+            "team_b_win": 0.18
         },
         "predicted_score": "2-0",
         "predicted_winner": "Mexico",
