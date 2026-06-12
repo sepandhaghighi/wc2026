@@ -60,6 +60,11 @@ class Team(Enum):
     CROATIA = "Croatia"
     GHANA = "Ghana"
     PANAMA = "Panama"
+
+class Host(Enum):
+    USA = "United States"
+    MEXICO = "Mexico"
+    CANADA = "Canada"
 CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID", "your_id")
 CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
