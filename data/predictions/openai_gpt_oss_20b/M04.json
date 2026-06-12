@@ -1,5 +1,5 @@
 {
-    "game_id": "M04",
+    "match_id": "M04",
     "simulation_env": {
         "timestamp": "2026-06-12T21:49:26.518844Z",
         "model": "openai/gpt-oss-20b",
