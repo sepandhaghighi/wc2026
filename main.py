@@ -395,7 +395,7 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
             llm_response_text = execution_result["result"]["response"]
         else:
             llm_response_text = execution_result["result"]["choices"][0]["message"]["content"]
-        response_memor_object = Response(message=str(llm_response_text))
+        response_memor_object = Response(message=str(llm_response_text), temperature=TEMPERATURE, top_p=TOP_P)
         session_memor.add_message(response_memor_object)
         return llm_response_text
     else:
