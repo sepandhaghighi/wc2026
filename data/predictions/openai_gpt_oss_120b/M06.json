@@ -1,0 +1,34 @@
+{
+    "match_id": "M06",
+    "simulation_env": {
+        "timestamp": "2026-06-13T06:55:24.086357Z",
+        "model": "openai/gpt-oss-120b",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 2000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Brazil",
+        "team_b": "Morocco",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.34,
+            "draw": 0.28,
+            "team_b_win": 0.38
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Brazil",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.78
+    }
+}
