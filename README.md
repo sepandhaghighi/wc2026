@@ -87,11 +87,11 @@ Each run saves two files: a **prediction** file with the match metadata, model, 
 
 ## Project Structure
 
-The main file is `benchmark.py`, with the team list in a JSON file and all results collected under `data/`:
+The main file is `main.py`, with the team list in a JSON file and all results collected under `data/`:
 
 ```text
 .
-├── benchmark.py          # the script that runs the benchmark
+├── main.py               # the script that runs the benchmark
 ├── wc_2026_teams.json    # team names, FIFA rankings, and confederations
 ├── data/                 # everything the runs produce (created automatically)
 └── README.md
