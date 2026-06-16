@@ -410,6 +410,7 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
             llm_reasoning_text = None
         response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name, tokens=response_tokens)
         session_memor.add_message(response_memor_object)
+        session_memor[1].update_tokens(prompt_tokens)
         return llm_response_text
     else:
         raise Exception(f"Cloudflare Engine Error: {execution_result.get('errors')}")
