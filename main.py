@@ -399,6 +399,8 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
     
     if execution_result.get("success"):
         #print(execution_result["result"])
+        prompt_tokens = execution_result["result"].get("usage", {}).get("prompt_tokens", None)
+        response_tokens = execution_result["result"].get("usage", {}).get("completion_tokens", None)
         if "choices" in execution_result["result"].keys():
             llm_message = execution_result["result"]["choices"][0]["message"]
             llm_response_text = llm_message["content"]
@@ -406,7 +408,7 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
         else:
             llm_response_text = execution_result["result"]["response"]
             llm_reasoning_text = None
-        response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name)
+        response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name, tokens=response_tokens)
         session_memor.add_message(response_memor_object)
         return llm_response_text
     else:
