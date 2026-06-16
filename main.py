@@ -11,6 +11,14 @@ from urllib3.util import Retry
 from pprint import pprint
 from memor import *
 
+RESPONSE_TEMPLATE = """<response>
+    {response}
+    </response>
+    <reasoning>
+    {reasoning}
+    </reasoning>
+"""
+
 class Phase(Enum):
     GROUP = "group"
     KNOCKOUT = "knockout"
@@ -398,14 +406,7 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
         else:
             llm_response_text = execution_result["result"]["response"]
             llm_reasoning_text = None
-        response_template = """<response>
-        {response}
-        </response>
-        <reasoning>
-        {reasoning}
-        </reasoning>
-        """
-        response_memor_object = Response(message=response_template.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name)
+        response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name)
         session_memor.add_message(response_memor_object)
         return llm_response_text
     else:
