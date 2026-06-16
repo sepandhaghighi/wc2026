@@ -11,6 +11,14 @@ from urllib3.util import Retry
 from pprint import pprint
 from memor import *
 
+RESPONSE_TEMPLATE = """<response>
+{response}
+</response>
+<reasoning>
+{reasoning}
+</reasoning>"""
+
+
 class Phase(Enum):
     GROUP = "group"
     KNOCKOUT = "knockout"
@@ -86,7 +94,7 @@ MODEL_LIST = [
 
 TEMPERATURE = 0.0
 TOP_P = 1.0
-MAX_TOKENS = 2000
+MAX_TOKENS = 7000
 
 
 REGISTRY_PATH = "wc_2026_teams.json"
@@ -391,11 +399,14 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
     
     if execution_result.get("success"):
         #print(execution_result["result"])
-        if "response" in execution_result["result"].keys():
-            llm_response_text = execution_result["result"]["response"]
+        if "choices" in execution_result["result"].keys():
+            llm_message = execution_result["result"]["choices"][0]["message"]
+            llm_response_text = llm_message["content"]
+            llm_reasoning_text = llm_message.get("reasoning_content", None) or llm_message.get("reasoning", None)
         else:
-            llm_response_text = execution_result["result"]["choices"][0]["message"]["content"]
-        response_memor_object = Response(message=str(llm_response_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name)
+            llm_response_text = execution_result["result"]["response"]
+            llm_reasoning_text = None
+        response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name)
         session_memor.add_message(response_memor_object)
         return llm_response_text
     else:
