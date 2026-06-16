@@ -12,12 +12,12 @@ from pprint import pprint
 from memor import *
 
 RESPONSE_TEMPLATE = """<response>
-    {response}
-    </response>
-    <reasoning>
-    {reasoning}
-    </reasoning>
-"""
+{response}
+</response>
+<reasoning>
+{reasoning}
+</reasoning>"""
+
 
 class Phase(Enum):
     GROUP = "group"
