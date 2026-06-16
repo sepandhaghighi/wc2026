@@ -1,0 +1,34 @@
+{
+    "match_id": "M19",
+    "simulation_env": {
+        "timestamp": "2026-06-16T07:08:41.803030Z",
+        "model": "meta/llama-4-scout-17b-16e-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Argentina",
+        "team_b": "Algeria",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.58,
+            "draw": 0.23,
+            "team_b_win": 0.19
+        },
+        "predicted_score": "2-0",
+        "predicted_winner": "Argentina",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.81
+    }
+}
