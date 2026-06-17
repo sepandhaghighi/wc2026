@@ -4,7 +4,7 @@
             {
                 "name": "Mexico",
                 "confederation": "CONCACAF",
-                "fifa_rank": 15,
+                "fifa_rank": 14,
                 "host": true
             },
             {
@@ -22,7 +22,7 @@
             {
                 "name": "Czech Republic",
                 "confederation": "UEFA",
-                "fifa_rank": 41,
+                "fifa_rank": 40,
                 "host": false
             }
         ],
