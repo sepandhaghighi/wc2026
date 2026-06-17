@@ -192,7 +192,7 @@
             {
                 "name": "Cape Verde",
                 "confederation": "CAF",
-                "fifa_rank": 69,
+                "fifa_rank": 67,
                 "host": false
             },
             {
@@ -204,7 +204,7 @@
             {
                 "name": "Uruguay",
                 "confederation": "CONMEBOL",
-                "fifa_rank": 17,
+                "fifa_rank": 16,
                 "host": false
             }
         ],
