@@ -62,7 +62,7 @@
             {
                 "name": "Morocco",
                 "confederation": "CAF",
-                "fifa_rank": 8,
+                "fifa_rank": 7,
                 "host": false
             },
             {
@@ -74,7 +74,7 @@
             {
                 "name": "Scotland",
                 "confederation": "UEFA",
-                "fifa_rank": 43,
+                "fifa_rank": 42,
                 "host": false
             }
         ],
