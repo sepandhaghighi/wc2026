@@ -1,7 +1,7 @@
 {
     "match_id": "M23",
     "simulation_env": {
-        "timestamp": "2026-06-17T22:26:47.824924Z",
+        "timestamp": "2026-06-17T22:37:10.159801Z",
         "model": "aisingapore/gemma-sea-lion-v4-27b-it",
         "hyperparameters": {
             "temperature": 0.0,
@@ -14,7 +14,7 @@
         "phase": "group",
         "team_a": "Ghana",
         "team_b": "Panama",
-        "host_country": "United States"
+        "host_country": "Canada"
     },
     "prediction": {
         "probabilities": {

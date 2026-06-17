@@ -1,7 +1,7 @@
 {
     "match_id": "M23",
     "simulation_env": {
-        "timestamp": "2026-06-17T22:26:58.781226Z",
+        "timestamp": "2026-06-17T22:37:47.740329Z",
         "model": "qwen/qwen3-30b-a3b-fp8",
         "hyperparameters": {
             "temperature": 0.0,
@@ -14,7 +14,7 @@
         "phase": "group",
         "team_a": "Ghana",
         "team_b": "Panama",
-        "host_country": "United States"
+        "host_country": "Canada"
     },
     "prediction": {
         "probabilities": {
@@ -22,8 +22,8 @@
             "draw": 0.35,
             "team_b_win": 0.4
         },
-        "predicted_score": "1-1",
-        "predicted_winner": "Draw",
+        "predicted_score": "1-0",
+        "predicted_winner": "Panama",
         "knockout_resolution": {
             "ended_in_extra_time": false,
             "ended_in_penalties": false,

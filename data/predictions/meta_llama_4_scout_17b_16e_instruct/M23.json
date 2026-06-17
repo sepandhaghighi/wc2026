@@ -1,7 +1,7 @@
 {
     "match_id": "M23",
     "simulation_env": {
-        "timestamp": "2026-06-17T22:27:13.629707Z",
+        "timestamp": "2026-06-17T22:38:12.682523Z",
         "model": "meta/llama-4-scout-17b-16e-instruct",
         "hyperparameters": {
             "temperature": 0.0,
@@ -14,7 +14,7 @@
         "phase": "group",
         "team_a": "Ghana",
         "team_b": "Panama",
-        "host_country": "United States"
+        "host_country": "Canada"
     },
     "prediction": {
         "probabilities": {

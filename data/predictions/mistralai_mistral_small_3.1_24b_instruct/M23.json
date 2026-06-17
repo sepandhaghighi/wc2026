@@ -1,7 +1,7 @@
 {
     "match_id": "M23",
     "simulation_env": {
-        "timestamp": "2026-06-17T22:27:08.305290Z",
+        "timestamp": "2026-06-17T22:37:57.320322Z",
         "model": "mistralai/mistral-small-3.1-24b-instruct",
         "hyperparameters": {
             "temperature": 0.0,
@@ -14,7 +14,7 @@
         "phase": "group",
         "team_a": "Ghana",
         "team_b": "Panama",
-        "host_country": "United States"
+        "host_country": "Canada"
     },
     "prediction": {
         "probabilities": {

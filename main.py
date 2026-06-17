@@ -493,7 +493,7 @@ if __name__ == "__main__":
     
     country_a = Team.GHANA.value
     country_b = Team.PANAMA.value
-    match_host = Host.USA.value
+    match_host = Host.CANADA.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
     team_b_metrics = fetch_true_national_team_form(international_results_df, country_b, last_n=15)

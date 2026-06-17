@@ -1,7 +1,7 @@
 {
     "match_id": "M23",
     "simulation_env": {
-        "timestamp": "2026-06-17T22:27:10.249788Z",
+        "timestamp": "2026-06-17T22:37:58.039159Z",
         "model": "meta/llama-3.1-8b-instruct-fast",
         "hyperparameters": {
             "temperature": 0.0,
@@ -14,13 +14,13 @@
         "phase": "group",
         "team_a": "Ghana",
         "team_b": "Panama",
-        "host_country": "United States"
+        "host_country": "Canada"
     },
     "prediction": {
         "probabilities": {
-            "team_a_win": 0.43,
-            "draw": 0.26,
-            "team_b_win": 0.31
+            "team_a_win": 0.42,
+            "draw": 0.28,
+            "team_b_win": 0.3
         },
         "predicted_score": "1-1",
         "predicted_winner": "Draw",
