@@ -82,13 +82,13 @@
             {
                 "name": "United States",
                 "confederation": "CONCACAF",
-                "fifa_rank": 16,
+                "fifa_rank": 17,
                 "host": true
             },
             {
                 "name": "Paraguay",
                 "confederation": "CONMEBOL",
-                "fifa_rank": 40,
+                "fifa_rank": 41,
                 "host": false
             },
             {
