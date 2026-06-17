@@ -4,7 +4,7 @@
             {
                 "name": "Mexico",
                 "confederation": "CONCACAF",
-                "fifa_rank": 15,
+                "fifa_rank": 14,
                 "host": true
             },
             {
@@ -22,7 +22,7 @@
             {
                 "name": "Czech Republic",
                 "confederation": "UEFA",
-                "fifa_rank": 41,
+                "fifa_rank": 40,
                 "host": false
             }
         ],
@@ -36,13 +36,13 @@
             {
                 "name": "Bosnia and Herzegovina",
                 "confederation": "UEFA",
-                "fifa_rank": 65,
+                "fifa_rank": 64,
                 "host": false
             },
             {
                 "name": "Qatar",
                 "confederation": "AFC",
-                "fifa_rank": 55,
+                "fifa_rank": 56,
                 "host": false
             },
             {
@@ -62,7 +62,7 @@
             {
                 "name": "Morocco",
                 "confederation": "CAF",
-                "fifa_rank": 8,
+                "fifa_rank": 7,
                 "host": false
             },
             {
@@ -74,7 +74,7 @@
             {
                 "name": "Scotland",
                 "confederation": "UEFA",
-                "fifa_rank": 43,
+                "fifa_rank": 42,
                 "host": false
             }
         ],
@@ -82,13 +82,13 @@
             {
                 "name": "United States",
                 "confederation": "CONCACAF",
-                "fifa_rank": 16,
+                "fifa_rank": 17,
                 "host": true
             },
             {
                 "name": "Paraguay",
                 "confederation": "CONMEBOL",
-                "fifa_rank": 40,
+                "fifa_rank": 41,
                 "host": false
             },
             {
@@ -120,7 +120,7 @@
             {
                 "name": "Ivory Coast",
                 "confederation": "CAF",
-                "fifa_rank": 34,
+                "fifa_rank": 33,
                 "host": false
             },
             {
@@ -134,7 +134,7 @@
             {
                 "name": "Netherlands",
                 "confederation": "UEFA",
-                "fifa_rank": 7,
+                "fifa_rank": 8,
                 "host": false
             },
             {
@@ -152,7 +152,7 @@
             {
                 "name": "Tunisia",
                 "confederation": "CAF",
-                "fifa_rank": 44,
+                "fifa_rank": 45,
                 "host": false
             }
         ],
@@ -172,7 +172,7 @@
             {
                 "name": "Iran",
                 "confederation": "AFC",
-                "fifa_rank": 21,
+                "fifa_rank": 20,
                 "host": false
             },
             {
@@ -192,7 +192,7 @@
             {
                 "name": "Cape Verde",
                 "confederation": "CAF",
-                "fifa_rank": 69,
+                "fifa_rank": 67,
                 "host": false
             },
             {
@@ -204,7 +204,7 @@
             {
                 "name": "Uruguay",
                 "confederation": "CONMEBOL",
-                "fifa_rank": 17,
+                "fifa_rank": 16,
                 "host": false
             }
         ],
@@ -212,13 +212,13 @@
             {
                 "name": "France",
                 "confederation": "UEFA",
-                "fifa_rank": 1,
+                "fifa_rank": 3,
                 "host": false
             },
             {
                 "name": "Senegal",
                 "confederation": "CAF",
-                "fifa_rank": 14,
+                "fifa_rank": 15,
                 "host": false
             },
             {
@@ -238,7 +238,7 @@
             {
                 "name": "Argentina",
                 "confederation": "CONMEBOL",
-                "fifa_rank": 3,
+                "fifa_rank": 1,
                 "host": false
             },
             {
@@ -302,13 +302,13 @@
             {
                 "name": "Ghana",
                 "confederation": "CAF",
-                "fifa_rank": 74,
+                "fifa_rank": 73,
                 "host": false
             },
             {
                 "name": "Panama",
                 "confederation": "CONCACAF",
-                "fifa_rank": 33,
+                "fifa_rank": 34,
                 "host": false
             }
         ]
