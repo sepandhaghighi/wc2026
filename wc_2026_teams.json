@@ -212,13 +212,13 @@
             {
                 "name": "France",
                 "confederation": "UEFA",
-                "fifa_rank": 1,
+                "fifa_rank": 3,
                 "host": false
             },
             {
                 "name": "Senegal",
                 "confederation": "CAF",
-                "fifa_rank": 14,
+                "fifa_rank": 15,
                 "host": false
             },
             {
