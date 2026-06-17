@@ -134,7 +134,7 @@
             {
                 "name": "Netherlands",
                 "confederation": "UEFA",
-                "fifa_rank": 7,
+                "fifa_rank": 8,
                 "host": false
             },
             {
@@ -152,7 +152,7 @@
             {
                 "name": "Tunisia",
                 "confederation": "CAF",
-                "fifa_rank": 44,
+                "fifa_rank": 45,
                 "host": false
             }
         ],
