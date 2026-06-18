@@ -1,0 +1,34 @@
+{
+    "match_id": "M23",
+    "simulation_env": {
+        "timestamp": "2026-06-17T22:38:14.634508Z",
+        "model": "meta/llama-3.2-3b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Ghana",
+        "team_b": "Panama",
+        "host_country": "Canada"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.43,
+            "draw": 0.26,
+            "team_b_win": 0.31
+        },
+        "predicted_score": "1-1",
+        "predicted_winner": "Draw",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.72
+    }
+}
