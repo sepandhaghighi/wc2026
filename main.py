@@ -393,7 +393,10 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
 
     #print(f"[DEBUG] Dispatching Cloudflare Payload: {request_payload}")
     
+    start_time = time.perf_counter()
     response = network_session.post(api_endpoint, headers=request_headers, json=request_payload, timeout=100)
+    end_time = time.perf_counter()
+    inference_time = round(end_time - start_time, 2)
     response.raise_for_status()
     execution_result = response.json()
     
@@ -408,7 +411,7 @@ def call_cloudflare_llm(model_name: str, session_memor: Session, temp: float, to
         else:
             llm_response_text = execution_result["result"]["response"]
             llm_reasoning_text = None
-        response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name, tokens=response_tokens)
+        response_memor_object = Response(message=RESPONSE_TEMPLATE.format(response=llm_response_text, reasoning=llm_reasoning_text), temperature=TEMPERATURE, top_p=TOP_P, model=model_name, tokens=response_tokens, inference_time=inference_time)
         session_memor.add_message(response_memor_object)
         session_memor[1].update_tokens(prompt_tokens)
         return llm_response_text
