@@ -109,6 +109,7 @@ data/
         └── <match_id>.json    # the prompt and reply that produced it
 ```
 
-## License
+## References
 
-This project is released under the MIT License.
+1. [FIFA Men's World Ranking](https://inside.fifa.com/fifa-world-ranking/men?dateId=FRS_Male_Football_20260401)
+2. [International Football Results](https://github.com/martj42/international_results)
