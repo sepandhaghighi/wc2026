@@ -113,3 +113,4 @@ data/
 
 1. [FIFA Men's World Ranking](https://inside.fifa.com/fifa-world-ranking/men?dateId=FRS_Male_Football_20260401)
 2. [International Football Results](https://github.com/martj42/international_results)
+3. [FIFA WC2026 Simulation](https://github.com/zvizdo/fifa-wc-2026-simulation)
