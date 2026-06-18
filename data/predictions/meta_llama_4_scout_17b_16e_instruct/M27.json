@@ -1,0 +1,34 @@
+{
+    "match_id": "M27",
+    "simulation_env": {
+        "timestamp": "2026-06-18T07:35:44.199833Z",
+        "model": "meta/llama-4-scout-17b-16e-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Canada",
+        "team_b": "Qatar",
+        "host_country": "Canada"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.58,
+            "draw": 0.26,
+            "team_b_win": 0.16
+        },
+        "predicted_score": "2-0",
+        "predicted_winner": "Canada",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.72
+    }
+}
