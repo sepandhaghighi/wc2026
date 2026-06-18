@@ -1,0 +1,34 @@
+{
+    "match_id": "M26",
+    "simulation_env": {
+        "timestamp": "2026-06-18T07:23:23.700758Z",
+        "model": "mistralai/mistral-small-3.1-24b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Switzerland",
+        "team_b": "Bosnia and Herzegovina",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.55,
+            "draw": 0.25,
+            "team_b_win": 0.2
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Switzerland",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    }
+}
