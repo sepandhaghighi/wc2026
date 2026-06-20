@@ -1,0 +1,34 @@
+{
+    "match_id": "M34",
+    "simulation_env": {
+        "timestamp": "2026-06-20T06:33:42.012288Z",
+        "model": "aisingapore/gemma-sea-lion-v4-27b-it",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Germany",
+        "team_b": "Ivory Coast",
+        "host_country": "Canada"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.68,
+            "draw": 0.22,
+            "team_b_win": 0.1
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Germany",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    }
+}
