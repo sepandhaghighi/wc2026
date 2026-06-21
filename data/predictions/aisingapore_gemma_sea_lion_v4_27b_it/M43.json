@@ -1,0 +1,34 @@
+{
+    "match_id": "M43",
+    "simulation_env": {
+        "timestamp": "2026-06-21T07:03:08.235150Z",
+        "model": "aisingapore/gemma-sea-lion-v4-27b-it",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Norway",
+        "team_b": "Senegal",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.42,
+            "draw": 0.28,
+            "team_b_win": 0.3
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Norway",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.75
+    }
+}
