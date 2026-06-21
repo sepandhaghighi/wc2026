@@ -495,7 +495,7 @@ if __name__ == "__main__":
     match_id = raw_match_id.replace("WC2026-", "") if "WC2026-" in raw_match_id else raw_match_id
     
     country_a = Team.FRANCE.value
-    country_b = Team.IRAQ.valu
+    country_b = Team.IRAQ.value
     match_host = Host.USA.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
