@@ -491,12 +491,12 @@ def save_match_prediction_and_session(
 
 if __name__ == "__main__":
     current_phase = Phase.GROUP.value 
-    raw_match_id = "WC2026-M40"
+    raw_match_id = "WC2026-M41"
     match_id = raw_match_id.replace("WC2026-", "") if "WC2026-" in raw_match_id else raw_match_id
     
-    country_a = Team.NEW_ZEALAND.value
-    country_b = Team.EGYPT.value
-    match_host = Host.CANADA.value
+    country_a = Team.ARGENTINA.value
+    country_b = Team.AUSTRIA.value
+    match_host = Host.USA.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
     team_b_metrics = fetch_true_national_team_form(international_results_df, country_b, last_n=15)
