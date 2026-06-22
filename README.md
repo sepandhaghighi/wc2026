@@ -92,6 +92,8 @@ The main file is `main.py`, with the team list in a JSON file and all results co
 ```text
 .
 ├── main.py               # the script that runs the benchmark
+├── config.py             # constants, enums, global paths, and session initialization
+├── utils.py              # functions
 ├── wc_2026_teams.json    # team names, FIFA rankings, and confederations
 ├── data/                 # everything the runs produce (created automatically)
 └── README.md
