@@ -1,0 +1,34 @@
+{
+    "match_id": "M47",
+    "simulation_env": {
+        "timestamp": "2026-06-23T07:56:51.751805Z",
+        "model": "qwen/qwen3-30b-a3b-fp8",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 8000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Panama",
+        "team_b": "Croatia",
+        "host_country": "Canada"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 20.0,
+            "draw": 30.0,
+            "team_b_win": 50.0
+        },
+        "predicted_score": "1-2",
+        "predicted_winner": "Croatia",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 75.0
+    }
+}
