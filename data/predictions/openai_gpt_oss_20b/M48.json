@@ -1,0 +1,34 @@
+{
+    "match_id": "M48",
+    "simulation_env": {
+        "timestamp": "2026-06-23T08:41:02.564246Z",
+        "model": "openai/gpt-oss-20b",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Colombia",
+        "team_b": "DR Congo",
+        "host_country": "Mexico"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.65,
+            "draw": 0.2,
+            "team_b_win": 0.15
+        },
+        "predicted_score": "2-0",
+        "predicted_winner": "Colombia",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.72
+    }
+}
