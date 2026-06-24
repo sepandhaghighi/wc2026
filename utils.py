@@ -7,7 +7,7 @@ from pathlib import Path
 from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 from memor import *
-from config import *
+from params import *
 
 def get_configured_session() -> requests.Session:
     """
