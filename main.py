@@ -7,11 +7,11 @@ from utils import *
 
 if __name__ == "__main__":
     current_phase = Phase.GROUP.value 
-    raw_match_id = "WC2026-M53"
+    raw_match_id = "WC2026-M54"
     match_id = raw_match_id.replace("WC2026-", "") if "WC2026-" in raw_match_id else raw_match_id
     
-    country_a = Team.SOUTH_AFRICA.value
-    country_b = Team.SOUTH_KOREA.value
+    country_a = Team.CZECH_REPUBLIC.value
+    country_b = Team.MEXICO.value
     match_host = Host.MEXICO.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, country_a, last_n=15)
