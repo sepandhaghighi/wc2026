@@ -48,14 +48,14 @@ Additional Workers AI models can be added by extending `MODEL_LIST` in `params.p
 
 This project plays out one match at a time, asking a handful of language models to predict each result. Every model sees the same prompt and the same data, so their predictions line up cleanly for comparison. To keep that reasoning grounded, each team's recent form is drawn from real international match history and paired with its FIFA ranking and confederation. The models' answers are saved alongside the full conversation that produced them, so every prediction stays easy to analyze and trace back.
 
-In short, it:
-
-- ⚽ Covers both the group stage and the knockout rounds
-- 🤖 Benchmarks several models on equal footing
-- 📈 Grounds each prediction in real form, rankings, and confederation data
-- 🧾 Returns clean JSON and keeps the session that created it
-
-Every model is asked to answer in the same JSON shape, which is what ends up in each prediction file. The fields differ slightly between the two stages: group-stage matches can end in a draw, while knockout matches always resolve to a single team advancing.
+- ⚽ Supports both group-stage and knockout-stage matches
+- 🤖 Evaluates multiple LLMs under identical conditions
+- 📈 Uses recent international match history to estimate team form
+- 🏆 Incorporates FIFA rankings and confederation information
+- 🌎 Includes host-country context
+- 🧾 Produces structured JSON predictions
+- 💾 Stores complete Memor sessions for reproducibility
+- 🔁 Allows repeated experiments with different models and matches
 
 ### Group Stage
 
