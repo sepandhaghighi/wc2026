@@ -57,6 +57,8 @@ This project plays out one match at a time, asking a handful of language models 
 - 💾 Stores complete Memor sessions for reproducibility
 - 🔁 Allows repeated experiments with different models and matches
 
+## Prediction Schema
+
 ### Group Stage
 
 ```json
@@ -97,6 +99,30 @@ This project plays out one match at a time, asking a handful of language models 
 ```
 
 Each run saves two files: a **prediction** file with the match metadata, model, hyperparameters, prediction JSON, and timestamp; and a **session** file holding the full prompt history and response as a reproducible Memor session.
+
+## Running a Benchmark
+
+Configure the match in `main.py`.
+
+```python
+current_phase = Phase.GROUP.value
+
+country_a = Team.CZECH_REPUBLIC.value
+country_b = Team.MEXICO.value
+
+match_host = Host.MEXICO.value
+
+raw_match_id = "WC2026-M54"
+```
+
+Run the benchmark:
+
+```bash
+python main.py
+```
+
+The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
+
 
 ## Project Structure
 
