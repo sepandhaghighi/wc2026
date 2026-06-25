@@ -98,12 +98,3 @@ ENV/
 *.iml
 out
 gen
-
-# Outputs
-
-prompt_test*.json
-response_test*.json
-session_test*.json
-template_test*.json
-session.csv
-session.pkl
