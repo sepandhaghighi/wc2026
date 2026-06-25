@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 from pprint import pprint
-from config import *
+from params import *
 from utils import *
 
 
