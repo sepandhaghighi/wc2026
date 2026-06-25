@@ -31,14 +31,18 @@ export CLOUDFLARE_API_KEY="your_api_token"
 
 ## Supported Models
 
-- OpenAI GPT-OSS 20B
-- OpenAI GPT-OSS 120B
-- Qwen 3 30B A3B
-- Gemma SEA-Lion V4 27B
-- Mistral Small 3.1 24B
-- Llama 3.1 8B
-- Llama 3.2 3B
-- Llama 4 Scout 17B
+The benchmark currently evaluates the following models:
+
+- `openai/gpt-oss-20b`
+- `openai/gpt-oss-120b`
+- `qwen/qwen3-30b-a3b-fp8`
+- `aisingapore/gemma-sea-lion-v4-27b-it`
+- `mistralai/mistral-small-3.1-24b-instruct`
+- `meta/llama-3.1-8b-instruct-fast`
+- `meta/llama-4-scout-17b-16e-instruct`
+- `meta/llama-3.2-3b-instruct`
+
+Additional Workers AI models can be added by extending `MODEL_LIST` in `params.py`.
 
 ## Features
 
