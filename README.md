@@ -2,21 +2,20 @@
 
 This project benchmarks Large Language Models (LLMs) on FIFA World Cup 2026 match prediction tasks.
 
-Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through Cloudflare Workers AI and stored together with their complete inference sessions for reproducibility and later analysis.
+Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) and stored together with their complete inference sessions for reproducibility and later analysis.
 
 ## Getting Started
 
 ### Requirements
 
 - Python 3.10+
-- A Cloudflare Workers AI account
+- A [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) account
 
 ### Installation
 
 ```bash
-git clone https://github.com/<username>/<repository>.git
-cd <repository>
-
+git clone https://github.com/sepandhaghighi/wc2026.git
+cd wc2026
 pip install -r requirements.txt
 ```
 
