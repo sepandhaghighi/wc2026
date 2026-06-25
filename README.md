@@ -150,6 +150,13 @@ data/
         └── <match_id>.json    # the prompt and reply that produced it
 ```
 
+## Disclaimer
+
+This project is intended for benchmarking and experimentation purposes.
+
+LLMs do not possess predictive knowledge of future sporting events, and generated forecasts should not be interpreted as betting advice or as statistically validated outcome probabilities.
+
+
 ## References
 
 1. [FIFA Men's World Ranking](https://inside.fifa.com/fifa-world-ranking/men?dateId=FRS_Male_Football_20260401)
