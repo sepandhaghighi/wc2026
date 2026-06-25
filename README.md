@@ -6,15 +6,23 @@ Each model receives the same information, including recent international results
 
 ## Getting Started
 
-You'll need Python 3.10+ and a [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) account.
+### Requirements
 
-Install the dependencies:
+- Python 3.10+
+- A Cloudflare Workers AI account
+
+### Installation
 
 ```bash
+git clone https://github.com/<username>/<repository>.git
+cd <repository>
+
 pip install -r requirements.txt
 ```
 
-Then add your Cloudflare credentials to the environment:
+### Configuration
+
+Set your Cloudflare credentials:
 
 ```bash
 export CLOUDFLARE_ACCOUNT_ID="your_account_id"
