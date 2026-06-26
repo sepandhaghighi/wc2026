@@ -1,0 +1,34 @@
+{
+    "match_id": "M64",
+    "simulation_env": {
+        "timestamp": "2026-06-26T10:56:46.349868Z",
+        "model": "openai/gpt-oss-20b",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Uruguay",
+        "team_b": "Spain",
+        "host_country": "Mexico"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.08,
+            "draw": 0.12,
+            "team_b_win": 0.8
+        },
+        "predicted_score": "2-0",
+        "predicted_winner": "Spain",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    }
+}
