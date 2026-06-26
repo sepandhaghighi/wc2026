@@ -1,19 +1,27 @@
-# World Cup 2026 Match Prediction Benchmark
+# World Cup 2026 Match Prediction Benchmark: Evaluating Large Language Models
 
-Evaluating multiple Large Language Models (LLMs) on FIFA World Cup 2026 match predictions.
-Using historical international football match results and teams' metadata, this project generates reproducible match predictions across several open-source and commercial models available through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/).
+This project benchmarks Large Language Models (LLMs) on FIFA World Cup 2026 match prediction tasks.
+
+Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) and stored together with their complete inference sessions for reproducibility and later analysis.
 
 ## Getting Started
 
-You'll need Python 3.10+ and a [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) account.
+### Requirements
 
-Install the dependencies:
+- Python 3.10+
+- A [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) account
+
+### Installation
 
 ```bash
+git clone https://github.com/sepandhaghighi/wc2026.git
+cd wc2026
 pip install -r requirements.txt
 ```
 
-Then add your Cloudflare credentials to the environment:
+### Configuration
+
+Set your Cloudflare credentials:
 
 ```bash
 export CLOUDFLARE_ACCOUNT_ID="your_account_id"
@@ -22,27 +30,33 @@ export CLOUDFLARE_API_KEY="your_api_token"
 
 ## Supported Models
 
-- OpenAI GPT-OSS 20B
-- OpenAI GPT-OSS 120B
-- Qwen 3 30B A3B
-- Gemma SEA-Lion V4 27B
-- Mistral Small 3.1 24B
-- Llama 3.1 8B
-- Llama 3.2 3B
-- Llama 4 Scout 17B
+The benchmark currently evaluates the following models:
+
+- `openai/gpt-oss-20b`
+- `openai/gpt-oss-120b`
+- `qwen/qwen3-30b-a3b-fp8`
+- `aisingapore/gemma-sea-lion-v4-27b-it`
+- `mistralai/mistral-small-3.1-24b-instruct`
+- `meta/llama-3.1-8b-instruct-fast`
+- `meta/llama-4-scout-17b-16e-instruct`
+- `meta/llama-3.2-3b-instruct`
+
+Additional Workers AI models can be added by extending `MODEL_LIST` in `params.py`.
 
 ## Features
 
 This project plays out one match at a time, asking a handful of language models to predict each result. Every model sees the same prompt and the same data, so their predictions line up cleanly for comparison. To keep that reasoning grounded, each team's recent form is drawn from real international match history and paired with its FIFA ranking and confederation. The models' answers are saved alongside the full conversation that produced them, so every prediction stays easy to analyze and trace back.
 
-In short, it:
+- ⚽ Supports both group-stage and knockout-stage matches
+- 🤖 Evaluates multiple LLMs under identical conditions
+- 📈 Uses recent international match history to estimate team form
+- 🏆 Incorporates FIFA rankings and confederation information
+- 🌎 Includes host-country context
+- 🧾 Produces structured JSON predictions
+- 💾 Stores complete Memor sessions for reproducibility
+- 🔁 Allows repeated experiments with different models and matches
 
-- ⚽ Covers both the group stage and the knockout rounds
-- 🤖 Benchmarks several models on equal footing
-- 📈 Grounds each prediction in real form, rankings, and confederation data
-- 🧾 Returns clean JSON and keeps the session that created it
-
-Every model is asked to answer in the same JSON shape, which is what ends up in each prediction file. The fields differ slightly between the two stages: group-stage matches can end in a draw, while knockout matches always resolve to a single team advancing.
+## Prediction Schema
 
 ### Group Stage
 
@@ -85,6 +99,30 @@ Every model is asked to answer in the same JSON shape, which is what ends up in 
 
 Each run saves two files: a **prediction** file with the match metadata, model, hyperparameters, prediction JSON, and timestamp; and a **session** file holding the full prompt history and response as a reproducible Memor session.
 
+## Running a Benchmark
+
+Configure the match in `main.py`.
+
+```python
+current_phase = Phase.GROUP.value
+
+country_a = Team.CZECH_REPUBLIC.value
+country_b = Team.MEXICO.value
+
+match_host = Host.MEXICO.value
+
+raw_match_id = "WC2026-M54"
+```
+
+Run the benchmark:
+
+```bash
+python main.py
+```
+
+The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
+
+
 ## Project Structure
 
 The main file is `main.py`, with the team list in a JSON file and all results collected under `data/`:
@@ -110,6 +148,13 @@ data/
     └── <model_name>/
         └── <match_id>.json    # the prompt and reply that produced it
 ```
+
+## Disclaimer
+
+This project is intended for benchmarking and experimentation purposes.
+
+LLMs do not possess predictive knowledge of future sporting events, and generated forecasts should not be interpreted as betting advice or as statistically validated outcome probabilities.
+
 
 ## References
 
