@@ -1,0 +1,34 @@
+{
+    "match_id": "M61",
+    "simulation_env": {
+        "timestamp": "2026-06-26T10:18:18.953883Z",
+        "model": "meta/llama-3.2-3b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Norway",
+        "team_b": "France",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.55,
+            "draw": 0.35,
+            "team_b_win": 0.1
+        },
+        "predicted_score": "1-1",
+        "predicted_winner": "Draw",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.75
+    }
+}
