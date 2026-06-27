@@ -1,0 +1,34 @@
+{
+    "match_id": "M68",
+    "simulation_env": {
+        "timestamp": "2026-06-27T06:38:47.182530Z",
+        "model": "meta/llama-3.1-8b-instruct-fast",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Croatia",
+        "team_b": "Ghana",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.62,
+            "draw": 0.24,
+            "team_b_win": 0.14
+        },
+        "predicted_score": "1-0",
+        "predicted_winner": "Croatia",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    }
+}
