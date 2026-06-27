@@ -1,0 +1,34 @@
+{
+    "match_id": "M67",
+    "simulation_env": {
+        "timestamp": "2026-06-27T06:29:31.760757Z",
+        "model": "aisingapore/gemma-sea-lion-v4-27b-it",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Panama",
+        "team_b": "England",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.08,
+            "draw": 0.15,
+            "team_b_win": 0.77
+        },
+        "predicted_score": "1-3",
+        "predicted_winner": "England",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    }
+}

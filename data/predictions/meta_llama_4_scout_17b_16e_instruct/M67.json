@@ -1,0 +1,34 @@
+{
+    "match_id": "M67",
+    "simulation_env": {
+        "timestamp": "2026-06-27T06:30:19.377737Z",
+        "model": "meta/llama-4-scout-17b-16e-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "group",
+        "team_a": "Panama",
+        "team_b": "England",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_win": 0.24,
+            "draw": 0.27,
+            "team_b_win": 0.49
+        },
+        "predicted_score": "1-2",
+        "predicted_winner": "England",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.73
+    }
+}
