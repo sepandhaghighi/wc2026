@@ -1,0 +1,108 @@
+name: Issue Report
+description: Report a problem, suggest an improvement, or discuss an idea
+title: "[Issue]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to contribute.
+
+        This repository benchmarks Large Language Models on FIFA World Cup 2026 match prediction tasks.
+
+        Use this form to report problems, suggest improvements, or discuss ideas.
+
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue type
+      options:
+        - Bug
+        - Enhancement
+        - Documentation
+        - Data correction
+        - Evaluation improvement
+        - Model suggestion
+        - Other
+      default: 0
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the issue, suggestion, or idea.
+      placeholder: |
+        Provide a clear and concise description.
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce (if applicable)
+      placeholder: |
+        1. Run main.py
+        2. Select match M54
+        3. Observe ...
+    validations:
+      required: false
+
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: |
+        Describe what you expected to happen.
+    validations:
+      required: false
+
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: |
+        Describe what actually happened.
+    validations:
+      required: false
+
+
+  - type: input
+    id: model
+    attributes:
+      label: Model involved (if applicable)
+      placeholder: |
+        openai/gpt-oss-120b
+    validations:
+      required: false
+
+
+  - type: input
+    id: match
+    attributes:
+      label: Match identifier (if applicable)
+      placeholder: |
+        M54
+    validations:
+      required: false
+
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or outputs
+      render: shell
+
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      placeholder: |
+        Add any other information here.
