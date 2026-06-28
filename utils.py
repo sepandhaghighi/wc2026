@@ -209,8 +209,14 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
             "  },"
         )
         outcome_rules = (
-            "A knockout match must determine a definite winner. If the predicted_score is a tie, "
-            "you must populate the extra_time and penalties object flags to indicate how the match is resolved."
+            "A knockout match cannot end in a draw. The predicted_score represents the final score after "
+            "regular time and, if required, extra time (120 minutes); it does NOT include the penalty shootout score."
+            "The predicted_winner MUST be either Team A or Team B. If the match is decided during extra time, set "
+            "ended_in_extra_time=true and ended_in_penalties=false. If the match is decided by a penalty "
+            "shootout, the predicted_score MUST remain the tied score after extra time (e.g., '1-1'), "
+            "set ended_in_penalties=true, provide the penalty_shootout_score (e.g., '4-3'), and set "
+            "predicted_winner to the penalty shootout winner. Do NOT return 'Draw' as the predicted_winner "
+            "under any circumstances."
         )
 
     system_instruction = (
