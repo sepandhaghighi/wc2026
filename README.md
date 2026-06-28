@@ -1,9 +1,10 @@
 <div align="center">
-<img src="https://github.com/sepandhaghighi/wc2026/raw/logo/logo.png" width="300">
+<img src="https://github.com/sepandhaghighi/wc2026/raw/main/logo.png" width="300">
 <h1>World Cup 2026 Match Prediction Benchmark: Evaluating Large Language Models</h1>
 <br/>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
 <a href="https://github.com/sepandhaghighi/wc2026"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sepandhaghighi/wc2026"></a>
+<a href="https://github.com/sepandhaghighi/wc2026"><img src="https://img.shields.io/github/stars/sepandhaghighi/wc2026.svg?style=social&label=Stars"></a>
 </div>
 
 ## Overview	
