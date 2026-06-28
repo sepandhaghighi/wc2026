@@ -1,7 +1,12 @@
-# World Cup 2026 Match Prediction Benchmark: Evaluating Large Language Models
+<div align="center">
+<img src="https://github.com/sepandhaghighi/wc2026/raw/logo/logo.png" width="450">
+<h1>World Cup 2026 Match Prediction Benchmark: Evaluating Large Language Models</h1>
+<br/>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
+<a href="https://github.com/sepandhaghighi/wc2026"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sepandhaghighi/wc2026"></a>
+</div>
 
 This project benchmarks Large Language Models (LLMs) on FIFA World Cup 2026 match prediction tasks.
-
 Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) and stored together with their complete inference sessions for reproducibility and later analysis.
 
 ## Getting Started
