@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/sepandhaghighi/wc2026/raw/logo/logo.png" width="450">
+<img src="https://github.com/sepandhaghighi/wc2026/raw/logo/logo.png" width="350">
 <h1>World Cup 2026 Match Prediction Benchmark: Evaluating Large Language Models</h1>
 <br/>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
