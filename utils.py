@@ -209,8 +209,34 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
             "  },"
         )
         outcome_rules = (
-            "A knockout match must determine a definite winner. If the predicted_score is a tie, "
-            "you must populate the extra_time and penalties object flags to indicate how the match is resolved."
+            "A knockout match must always produce exactly ONE of the following valid outcomes:\n\n"
+
+            "1. Team A wins in regular time:\n"
+            "   - predicted_score is NOT tied\n"
+            "   - predicted_winner = Team A\n"
+            "   - ended_in_extra_time = false\n"
+            "   - ended_in_penalties = false\n\n"
+
+            "2. Team B wins in regular time:\n"
+            "   - predicted_score is NOT tied\n"
+            "   - predicted_winner = Team B\n"
+            "   - ended_in_extra_time = false\n"
+            "   - ended_in_penalties = false\n\n"
+
+            "3. Team A or Team B wins in extra time:\n"
+            "   - predicted_score is NOT tied\n"
+            "   - predicted_winner is the winning team\n"
+            "   - ended_in_extra_time = true\n"
+            "   - ended_in_penalties = false\n\n"
+
+            "4. Team A or Team B wins on penalties:\n"
+            "   - predicted_score MUST be tied because it is the score after extra time (120 minutes)\n"
+            "   - predicted_winner is the penalty winner\n"
+            "   - ended_in_extra_time = false\n"
+            "   - ended_in_penalties = true\n"
+            "   - penalty_shootout_score MUST be provided\n\n"
+
+            "Any other combination of values is INVALID. Never return an invalid combination."
         )
 
     system_instruction = (

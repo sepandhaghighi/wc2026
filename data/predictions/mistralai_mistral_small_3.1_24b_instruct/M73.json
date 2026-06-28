@@ -1,0 +1,33 @@
+{
+    "match_id": "M73",
+    "simulation_env": {
+        "timestamp": "2026-06-28T16:02:50.230411Z",
+        "model": "mistralai/mistral-small-3.1-24b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "South Africa",
+        "team_b": "Canada",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.35,
+            "team_b_advance": 0.65
+        },
+        "predicted_score": "1-1",
+        "predicted_winner": "Canada",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": true,
+            "penalty_shootout_score": "4-3"
+        },
+        "confidence": 0.78
+    }
+}
