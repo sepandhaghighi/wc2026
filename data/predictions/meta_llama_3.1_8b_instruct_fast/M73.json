@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:45:44.222063Z",
+        "timestamp": "2026-06-28T16:02:51.530285Z",
         "model": "meta/llama-3.1-8b-instruct-fast",
         "hyperparameters": {
             "temperature": 0.0,
@@ -25,8 +25,7 @@
         "predicted_winner": "South Africa",
         "knockout_resolution": {
             "ended_in_extra_time": false,
-            "ended_in_penalties": false,
-            "penalty_shootout_score": null
+            "ended_in_penalties": false
         },
         "confidence": 0.85
     }

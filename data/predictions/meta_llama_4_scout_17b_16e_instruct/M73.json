@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:45:46.090098Z",
+        "timestamp": "2026-06-28T16:02:57.061171Z",
         "model": "meta/llama-4-scout-17b-16e-instruct",
         "hyperparameters": {
             "temperature": 0.0,
@@ -18,8 +18,8 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_advance": 0.35,
-            "team_b_advance": 0.65
+            "team_a_advance": 0.421,
+            "team_b_advance": 0.579
         },
         "predicted_score": "1-2",
         "predicted_winner": "Canada",
@@ -28,6 +28,6 @@
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "confidence": 0.7
+        "confidence": 0.73
     }
 }

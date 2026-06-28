@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:45:43.249645Z",
+        "timestamp": "2026-06-28T16:02:50.230411Z",
         "model": "mistralai/mistral-small-3.1-24b-instruct",
         "hyperparameters": {
             "temperature": 0.0,
@@ -24,7 +24,7 @@
         "predicted_score": "1-1",
         "predicted_winner": "Canada",
         "knockout_resolution": {
-            "ended_in_extra_time": true,
+            "ended_in_extra_time": false,
             "ended_in_penalties": true,
             "penalty_shootout_score": "4-3"
         },

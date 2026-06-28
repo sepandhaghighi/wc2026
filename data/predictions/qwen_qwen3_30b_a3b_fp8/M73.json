@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:45:35.970646Z",
+        "timestamp": "2026-06-28T16:02:26.136265Z",
         "model": "qwen/qwen3-30b-a3b-fp8",
         "hyperparameters": {
             "temperature": 0.0,
@@ -18,8 +18,8 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_advance": 0.4,
-            "team_b_advance": 0.6
+            "team_a_advance": 0.32,
+            "team_b_advance": 0.68
         },
         "predicted_score": "2-1",
         "predicted_winner": "Canada",
@@ -28,6 +28,6 @@
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "confidence": 0.65
+        "confidence": 0.75
     }
 }

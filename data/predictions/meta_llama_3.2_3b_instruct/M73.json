@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:45:46.945924Z",
+        "timestamp": "2026-06-28T16:02:59.517326Z",
         "model": "meta/llama-3.2-3b-instruct",
         "hyperparameters": {
             "temperature": 0.0,
@@ -18,16 +18,16 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_advance": 0.55,
-            "team_b_advance": 0.45
+            "team_a_advance": 0.85,
+            "team_b_advance": 0.15
         },
-        "predicted_score": "1-1",
-        "predicted_winner": "Canada",
+        "predicted_score": "1-0",
+        "predicted_winner": "South Africa",
         "knockout_resolution": {
             "ended_in_extra_time": false,
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "confidence": 0.58
+        "confidence": 0.8
     }
 }
