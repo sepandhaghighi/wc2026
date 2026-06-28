@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:14:55.431503Z",
+        "timestamp": "2026-06-28T15:45:46.090098Z",
         "model": "meta/llama-4-scout-17b-16e-instruct",
         "hyperparameters": {
             "temperature": 0.0,
@@ -28,6 +28,6 @@
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "confidence": 0.72
+        "confidence": 0.7
     }
 }

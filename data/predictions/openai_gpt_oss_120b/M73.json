@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:14:45.963375Z",
+        "timestamp": "2026-06-28T15:45:39.948010Z",
         "model": "openai/gpt-oss-120b",
         "hyperparameters": {
             "temperature": 0.0,
@@ -18,10 +18,10 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_advance": 0.32,
-            "team_b_advance": 0.68
+            "team_a_advance": 0.25,
+            "team_b_advance": 0.75
         },
-        "predicted_score": "2-0",
+        "predicted_score": "2-1",
         "predicted_winner": "Canada",
         "knockout_resolution": {
             "ended_in_extra_time": false,

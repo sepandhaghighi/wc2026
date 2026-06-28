@@ -1,7 +1,7 @@
 {
     "match_id": "M73",
     "simulation_env": {
-        "timestamp": "2026-06-28T15:14:51.837049Z",
+        "timestamp": "2026-06-28T15:45:44.222063Z",
         "model": "meta/llama-3.1-8b-instruct-fast",
         "hyperparameters": {
             "temperature": 0.0,
@@ -18,16 +18,16 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_advance": 0.42,
-            "team_b_advance": 0.58
+            "team_a_advance": 0.62,
+            "team_b_advance": 0.38
         },
-        "predicted_score": "1-1",
-        "predicted_winner": "Draw",
+        "predicted_score": "1-0",
+        "predicted_winner": "South Africa",
         "knockout_resolution": {
             "ended_in_extra_time": false,
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "confidence": 0.75
+        "confidence": 0.85
     }
 }
