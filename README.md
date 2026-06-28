@@ -125,28 +125,24 @@ The script downloads historical international results, computes team form statis
 
 ## Project Structure
 
-The main file is `main.py`, with the team list in a JSON file and all results collected under `data/`:
-
-```text
-.
-├── main.py               # the script that runs the benchmark
-├── params.py             # constants, enums, global paths
-├── utils.py              # functions
-├── wc_2026_teams.json    # team names, FIFA rankings, and confederations
-├── data/                 # everything the runs produce (created automatically)
-└── README.md
-```
+The main file is `main.py`, with the team list in a JSON file and all results collected under `data/`.
 
 When you run the benchmark, it fills in `data/`. Results are grouped first by model and then by match, so it's easy to find a single prediction or compare the same match across models:
 
 ```text
-data/
-├── predictions/
-│   └── <model_name>/
-│       └── <match_id>.json    # what the model predicted
-└── sessions/
-    └── <model_name>/
-        └── <match_id>.json    # the prompt and reply that produced it
+.
+├── main.py                       # the script that runs the benchmark
+├── params.py                     # constants, enums, global paths
+├── utils.py                      # functions
+├── data/                         # data
+│   ├── wc_2026_teams.json        # team names, FIFA rankings, and confederations
+│   ├── predictions/
+│   │   └── <model_name>/
+│   │       └── <match_id>.json   # what the model predicted
+│   └── sessions/
+│       └── <model_name>/
+│           └── <match_id>.json   # the prompt and reply that produced it
+└── README.md
 ```
 
 ## Disclaimer

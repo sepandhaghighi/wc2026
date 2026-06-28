@@ -89,9 +89,10 @@ TEMPERATURE = 0.0
 TOP_P = 1.0
 MAX_TOKENS = 7000
 
-REGISTRY_PATH = "wc_2026_teams.json"
+DATA_ROOT = Path("data")
+REGISTRY_PATH = DATA_ROOT / "wc_2026_teams.json"
 HISTORICAL_RESULTS_URL = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
 
-DATA_ROOT = Path("data")
+
 PREDICTIONS_ROOT = DATA_ROOT / "predictions"
 SESSIONS_ROOT = DATA_ROOT / "sessions"
