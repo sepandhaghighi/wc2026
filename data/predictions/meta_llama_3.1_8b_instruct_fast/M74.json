@@ -25,7 +25,8 @@
         "predicted_winner": "Brazil",
         "knockout_resolution": {
             "ended_in_extra_time": false,
-            "ended_in_penalties": false
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
         },
         "confidence": 0.85
     }
