@@ -18,7 +18,7 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_win": 0.52,
+            "team_a_win": 0.51,
             "draw": 0.22,
             "team_b_win": 0.27
         },
