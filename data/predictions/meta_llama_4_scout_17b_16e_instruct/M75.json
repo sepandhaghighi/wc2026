@@ -1,0 +1,33 @@
+{
+    "match_id": "M75",
+    "simulation_env": {
+        "timestamp": "2026-06-29T15:41:49.112190Z",
+        "model": "meta/llama-4-scout-17b-16e-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Germany",
+        "team_b": "Paraguay",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.65,
+            "team_b_advance": 0.35
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Germany",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.72
+    }
+}
