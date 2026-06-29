@@ -76,6 +76,13 @@ CLOUDFLARE_API_TOKEN = os.getenv("CLOUDFLARE_API_KEY", "your_token")
 
 MODEL_LIST = [
     "openai/gpt-oss-20b",
+    "aisingapore/gemma-sea-lion-v4-27b-it",
+    "qwen/qwen3-30b-a3b-fp8",
+    "openai/gpt-oss-120b",
+    "mistralai/mistral-small-3.1-24b-instruct",
+    "meta/llama-3.1-8b-instruct-fast",
+    "meta/llama-4-scout-17b-16e-instruct",
+    "meta/llama-3.2-3b-instruct"
 ]
 
 TEMPERATURE = 0.0
