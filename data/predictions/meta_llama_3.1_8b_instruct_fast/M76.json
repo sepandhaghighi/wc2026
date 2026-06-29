@@ -1,0 +1,33 @@
+{
+    "match_id": "M76",
+    "simulation_env": {
+        "timestamp": "2026-06-29T16:08:28.691858Z",
+        "model": "meta/llama-3.1-8b-instruct-fast",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Netherlands",
+        "team_b": "Morocco",
+        "host_country": "Mexico"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.62,
+            "team_b_advance": 0.38
+        },
+        "predicted_score": "1-0",
+        "predicted_winner": "Netherlands",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    }
+}
