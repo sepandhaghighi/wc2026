@@ -23,7 +23,7 @@
             "team_b_win": 0.4
         },
         "predicted_score": "1-1",
-        "predicted_winner": "United States",
+        "predicted_winner": "Draw",
         "knockout_resolution": {
             "ended_in_extra_time": false,
             "ended_in_penalties": false,
