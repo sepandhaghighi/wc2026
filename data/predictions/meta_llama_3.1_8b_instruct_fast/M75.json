@@ -25,7 +25,8 @@
         "predicted_winner": "Germany",
         "knockout_resolution": {
             "ended_in_extra_time": false,
-            "ended_in_penalties": false
+            "ended_in_penalties": false,
+            "penalty_shootout_score": false
         },
         "confidence": 0.85
     }

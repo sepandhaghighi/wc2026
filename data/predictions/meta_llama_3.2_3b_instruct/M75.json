@@ -21,8 +21,8 @@
             "team_a_advance": 0.85,
             "team_b_advance": 0.15
         },
-        "predicted_score": "1-1",
-        "predicted_winner": "Draw",
+        "predicted_score": "1-0",
+        "predicted_winner": "Germany",
         "knockout_resolution": {
             "ended_in_extra_time": false,
             "ended_in_penalties": false,
