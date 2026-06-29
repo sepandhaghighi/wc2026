@@ -29,5 +29,9 @@
             "penalty_shootout_score": null
         },
         "confidence": 0.92
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
     }
 }

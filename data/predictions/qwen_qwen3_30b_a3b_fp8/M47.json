@@ -18,9 +18,9 @@
     },
     "prediction": {
         "probabilities": {
-            "team_a_win": 0.20,
-            "draw": 0.30,
-            "team_b_win": 0.50
+            "team_a_win": 0.2,
+            "draw": 0.3,
+            "team_b_win": 0.5
         },
         "predicted_score": "1-2",
         "predicted_winner": "Croatia",
@@ -30,5 +30,9 @@
             "penalty_shootout_score": null
         },
         "confidence": 75.0
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
     }
 }
