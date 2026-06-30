@@ -30,5 +30,9 @@
             "draw": 0.26,
             "team_a_win": 0.62
         }
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
     }
 }

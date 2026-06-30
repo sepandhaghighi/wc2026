@@ -30,5 +30,18 @@
             "penalty_shootout_score": null
         },
         "confidence": 0.78
+    },
+    "post_processing": {
+        "performed": true,
+        "operations": [
+            {
+                "type": "constraint_fix",
+                "method": "normalize_probabilities",
+                "field": "prediction.probabilities.team_a_win",
+                "old_value": 0.52,
+                "new_value": 0.51,
+                "reason": "Probabilities were normalized to sum to 1.0."
+            }
+        ]
     }
 }
