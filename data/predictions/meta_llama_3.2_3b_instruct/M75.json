@@ -31,7 +31,7 @@
         "confidence": 0.6
     },
     "post_processing": {
-        "performed": false,
+        "performed": true,
         "operations": [
             {
                 "type": "resolution_fix",
