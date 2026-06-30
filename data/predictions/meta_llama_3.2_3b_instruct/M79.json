@@ -1,0 +1,54 @@
+{
+    "match_id": "M79",
+    "simulation_env": {
+        "timestamp": "2026-06-30T13:47:27.328310Z",
+        "model": "meta/llama-3.2-3b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Mexico",
+        "team_b": "Ecuador",
+        "host_country": "Mexico"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.85,
+            "team_b_advance": 0.15
+        },
+        "predicted_score": "1-0",
+        "predicted_winner": "Mexico",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.6
+    },
+    "post_processing": {
+        "performed": true,
+        "operations": [
+            {
+                "type": "resolution_fix",
+                "method": "resolve_knockout_draw",
+                "field": "prediction.predicted_winner",
+                "old_value": "Draw",
+                "new_value": "Mexico",
+                "reason": "Knockout matches cannot end in a draw. Winner was selected from the higher advance probability."
+            },
+            {
+                "type": "resolution_fix",
+                "method": "resolve_knockout_draw",
+                "field": "prediction.predicted_score",
+                "old_value": "1-1",
+                "new_value": "1-0",
+                "reason": "Predicted score was updated to match the selected winner after resolving an invalid knockout draw."
+            }
+        ]
+    }
+}
