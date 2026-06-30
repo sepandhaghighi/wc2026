@@ -32,7 +32,24 @@
         "confidence": 75.0
     },
     "post_processing": {
-        "performed": false,
-        "operations": []
+        "performed": true,
+        "operations": [
+            {
+                "type": "constraint_fix",
+                "method": "convert_percentage_probabilities",
+                "field": "prediction.probabilities",
+                "old_value": {
+                    "team_a_win": 20.0,
+                    "draw": 30.0,
+                    "team_b_win": 50.0
+                },
+                "new_value": {
+                    "team_a_win": 0.20,
+                    "draw": 0.30,
+                    "team_b_win": 0.50
+                },
+                "reason": "Probability values were expressed as percentages instead of decimal probabilities."
+            }
+        ]
     }
 }
