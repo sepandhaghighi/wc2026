@@ -394,7 +394,11 @@ def save_match_prediction_and_session(
             "team_b": match_meta["team_b"],
             "host_country": match_meta["host_country"]
         },
-        "prediction": prediction_data
+        "prediction": prediction_data,
+        "post_processing": {
+            "performed": False,
+            "operations": []
+        }
     }
     
     with open(destination_prediction_file, 'w', encoding='utf-8') as pred_file:

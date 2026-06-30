@@ -1,0 +1,37 @@
+{
+    "match_id": "M77",
+    "simulation_env": {
+        "timestamp": "2026-06-30T11:32:30.408429Z",
+        "model": "mistralai/mistral-small-3.1-24b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Ivory Coast",
+        "team_b": "Norway",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.45,
+            "team_b_advance": 0.55
+        },
+        "predicted_score": "1-2",
+        "predicted_winner": "Norway",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.78
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
+    }
+}
