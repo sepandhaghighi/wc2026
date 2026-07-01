@@ -44,9 +44,9 @@
                     "team_b_win": 50.0
                 },
                 "new_value": {
-                    "team_a_win": 0.20,
-                    "draw": 0.30,
-                    "team_b_win": 0.50
+                    "team_a_win": 0.2,
+                    "draw": 0.3,
+                    "team_b_win": 0.5
                 },
                 "reason": "Probability values were expressed as percentages instead of decimal probabilities."
             }
