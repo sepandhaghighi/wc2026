@@ -1,0 +1,37 @@
+{
+    "match_id": "M80",
+    "simulation_env": {
+        "timestamp": "2026-07-01T11:40:54.216809Z",
+        "model": "mistralai/mistral-small-3.1-24b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "England",
+        "team_b": "DR Congo",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.75,
+            "team_b_advance": 0.25
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "England",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
+    }
+}
