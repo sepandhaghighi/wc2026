@@ -1,0 +1,46 @@
+{
+    "match_id": "M81",
+    "simulation_env": {
+        "timestamp": "2026-07-01T11:55:11.081964Z",
+        "model": "meta/llama-3.1-8b-instruct-fast",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Belgium",
+        "team_b": "Senegal",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.73,
+            "team_b_advance": 0.27
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Belgium",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    },
+    "post_processing": {
+        "performed": true,
+        "operations": [
+            {
+                "type": "schema_fix",
+                "method": "add_missing_field",
+                "field": "prediction.knockout_resolution.penalty_shootout_score",
+                "old_value": null,
+                "new_value": null,
+                "reason": "Required field was missing from knockout_resolution."
+            }
+        ]
+    }
+}
