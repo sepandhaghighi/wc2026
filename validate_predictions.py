@@ -17,9 +17,7 @@ def parse_score(score):
         raise ValueError("predicted_score must be a string.")
 
     if not SCORE_PATTERN.fullmatch(score):
-        raise ValueError(
-            "predicted_score must have format '<int>-<int>'."
-        )
+        raise ValueError("predicted_score must have format '<int>-<int>'.")
 
     home, away = map(int, score.split("-"))
     return home, away
@@ -59,9 +57,7 @@ def validate_structure(data):
 
         missing = required - sim.keys()
         if missing:
-            errors.append(
-                f"simulation_env missing keys: {sorted(missing)}"
-            )
+            errors.append(f"simulation_env missing keys: {sorted(missing)}")
 
         if "timestamp" in sim and not isinstance(sim["timestamp"], str):
             errors.append("'timestamp' must be a string.")
@@ -82,9 +78,7 @@ def validate_structure(data):
 
             missing = required - hp.keys()
             if missing:
-                errors.append(
-                    f"hyperparameters missing keys: {sorted(missing)}"
-                )
+                errors.append(f"hyperparameters missing keys: {sorted(missing)}")
 
             if "temperature" in hp and not is_number(hp["temperature"]):
                 errors.append("'temperature' must be numeric.")
@@ -112,18 +106,14 @@ def validate_structure(data):
 
         missing = required - ctx.keys()
         if missing:
-            errors.append(
-                f"match_context missing keys: {sorted(missing)}"
-            )
+            errors.append(f"match_context missing keys: {sorted(missing)}")
 
         for key in required:
             if key in ctx and not isinstance(ctx[key], str):
                 errors.append(f"'{key}' must be a string.")
 
         if "phase" in ctx and ctx["phase"] not in {"group", "knockout"}:
-            errors.append(
-                "phase must be either 'group' or 'knockout'."
-            )
+            errors.append("phase must be either 'group' or 'knockout'.")
 
     pred = data["prediction"]
 
@@ -141,23 +131,15 @@ def validate_structure(data):
 
     missing = required - pred.keys()
     if missing:
-        errors.append(
-            f"prediction missing keys: {sorted(missing)}"
-        )
+        errors.append(f"prediction missing keys: {sorted(missing)}")
 
     if "confidence" in pred and not is_number(pred["confidence"]):
         errors.append("'confidence' must be numeric.")
 
-    if (
-        "predicted_score" in pred
-        and not isinstance(pred["predicted_score"], str)
-    ):
+    if ("predicted_score" in pred and not isinstance(pred["predicted_score"], str)):
         errors.append("'predicted_score' must be a string.")
 
-    if (
-        "predicted_winner" in pred
-        and not isinstance(pred["predicted_winner"], str)
-    ):
+    if ("predicted_winner" in pred and not isinstance(pred["predicted_winner"], str)):
         errors.append("'predicted_winner' must be a string.")
 
     probs = pred.get("probabilities")
@@ -170,16 +152,12 @@ def validate_structure(data):
 
         for key, value in probs.items():
             if not is_number(value):
-                errors.append(
-                    f"Probability '{key}' must be numeric."
-                )
+                errors.append(f"Probability '{key}' must be numeric.")
 
     resolution = pred.get("knockout_resolution")
 
     if not isinstance(resolution, dict):
-        errors.append(
-            "'knockout_resolution' must be an object."
-        )
+        errors.append("'knockout_resolution' must be an object.")
     else:
         required = {
             "ended_in_extra_time",
@@ -189,37 +167,18 @@ def validate_structure(data):
 
         missing = required - resolution.keys()
         if missing:
-            errors.append(
-                "knockout_resolution missing keys: "
-                f"{sorted(missing)}"
-            )
+            errors.append(f"knockout_resolution missing keys: {sorted(missing)}")
 
-        if (
-            "ended_in_extra_time" in resolution
-            and not isinstance(
-                resolution["ended_in_extra_time"], bool
-            )
-        ):
-            errors.append(
-                "'ended_in_extra_time' must be boolean."
-            )
+        if ("ended_in_extra_time" in resolution and not isinstance(resolution["ended_in_extra_time"], bool)):
+            errors.append("'ended_in_extra_time' must be boolean.")
 
-        if (
-            "ended_in_penalties" in resolution
-            and not isinstance(
-                resolution["ended_in_penalties"], bool
-            )
-        ):
-            errors.append(
-                "'ended_in_penalties' must be boolean."
-            )
+        if ("ended_in_penalties" in resolution and not isinstance(resolution["ended_in_penalties"], bool)):
+            errors.append("'ended_in_penalties' must be boolean.")
 
         ps = resolution.get("penalty_shootout_score")
 
         if ps is not None and not isinstance(ps, str):
-            errors.append(
-                "'penalty_shootout_score' must be a string or null."
-            )
+            errors.append("'penalty_shootout_score' must be a string or null.")
 
     return errors
 
@@ -249,9 +208,7 @@ def validate_semantics(data):
     total = sum(probs.values())
 
     if abs(total - 1.0) > 1e-6:
-        errors.append(
-            f"Probabilities sum to {total:.6f} instead of 1."
-        )
+        errors.append(f"Probabilities sum to {total:.6f} instead of 1.")
 
     resolution = pred["knockout_resolution"]
 
@@ -268,39 +225,25 @@ def validate_semantics(data):
         }
 
         if set(probs.keys()) != expected:
-            errors.append(
-                "Invalid probability keys for group stage."
-            )
+            errors.append("Invalid probability keys for group stage.")
 
         if winner not in {team_a, team_b, "Draw"}:
-            errors.append(
-                "Winner must be Team A, Team B or Draw."
-            )
+            errors.append("Winner must be Team A, Team B or Draw.")
 
         if tied and winner != "Draw":
-            errors.append(
-                "Tied score requires predicted_winner='Draw'."
-            )
+            errors.append("Tied score requires predicted_winner='Draw'.")
 
         if not tied and winner == "Draw":
-            errors.append(
-                "Non-tied score cannot have predicted_winner='Draw'."
-            )
+            errors.append("Non-tied score cannot have predicted_winner='Draw'.")
 
         if extra:
-            errors.append(
-                "Group stage cannot end in extra time."
-            )
+            errors.append("Group stage cannot end in extra time.")
 
         if penalties:
-            errors.append(
-                "Group stage cannot end in penalties."
-            )
+            errors.append("Group stage cannot end in penalties.")
 
         if penalty_score is not None:
-            errors.append(
-                "Group stage cannot contain penalty_shootout_score."
-            )
+            errors.append("Group stage cannot contain penalty_shootout_score.")
 
     else:
 
@@ -310,43 +253,29 @@ def validate_semantics(data):
         }
 
         if set(probs.keys()) != expected:
-            errors.append(
-                "Invalid probability keys for knockout stage."
-            )
+            errors.append("Invalid probability keys for knockout stage.")
 
         if winner not in {team_a, team_b}:
-            errors.append(
-                "Knockout winner must be Team A or Team B."
-            )
+            errors.append("Knockout winner must be Team A or Team B.")
 
         if extra and penalties:
-            errors.append(
-                "Cannot end in both extra time and penalties."
-            )
+            errors.append("Cannot end in both extra time and penalties.")
 
         if penalties:
 
             if not tied:
-                errors.append(
-                    "Penalty shootout requires a tied predicted_score."
-                )
+                errors.append("Penalty shootout requires a tied predicted_score.")
 
             if penalty_score is None:
-                errors.append(
-                    "Penalty shootout score is missing."
-                )
+                errors.append("Penalty shootout score is missing.")
 
         else:
 
             if tied:
-                errors.append(
-                    "Tied predicted_score requires penalties."
-                )
+                errors.append("Tied predicted_score requires penalties.")
 
             if penalty_score is not None:
-                errors.append(
-                    "Penalty shootout score present although penalties=False."
-                )
+                errors.append("Penalty shootout score present although penalties=False.")
 
     return errors
 
