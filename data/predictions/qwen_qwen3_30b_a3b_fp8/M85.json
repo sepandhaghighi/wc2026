@@ -1,0 +1,46 @@
+{
+    "match_id": "M85",
+    "simulation_env": {
+        "timestamp": "2026-07-02T10:34:10.841776Z",
+        "model": "qwen/qwen3-30b-a3b-fp8",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Switzerland",
+        "team_b": "Algeria",
+        "host_country": "Canada"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.525,
+            "team_b_advance": 0.475
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Switzerland",
+        "knockout_resolution": {
+            "ended_in_extra_time": true,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.75
+    },
+    "post_processing": {
+        "performed": true,
+        "operations": [
+            {
+                "type": "resolution_fix",
+                "method": "resolve_knockout_draw",
+                "field": "prediction.predicted_score",
+                "old_value": "1-1",
+                "new_value": "2-1",
+                "reason": "Predicted score was updated to match the selected winner."
+            }
+        ]
+    }
+}
