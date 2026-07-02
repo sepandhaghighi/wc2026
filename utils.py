@@ -200,6 +200,16 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
             "    \"team_b_win\": float # Probability of team B winning in normal time\n"
             "  },"
         )
+        predict_schema = (
+            "  \"predicted_score\": \"string\", # e.g., \"2-1\" or \"1-1\" based on full time (90 min) score\n"
+            "  \"predicted_winner\": \"string\", # The team name or \"Draw\"\n"
+            "  \"knockout_resolution\": {\n"
+            "    \"ended_in_extra_time\": false,\n"
+            "    \"ended_in_penalties\": false,\n"
+            "    \"penalty_shootout_score\": null\n"
+            "  },\n"
+            "  \"confidence\": float\n"
+        )
         outcome_rules = "A group match can end in a Win, Loss, or Draw at the conclusion of normal time."
     else:
         probability_schema = (
