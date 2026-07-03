@@ -143,7 +143,7 @@ When you run the benchmark, it fills in `data/`. Results are grouped first by mo
 │   ├── main.py                   # the script that runs the benchmark
 │   ├── params.py                 # constants, enums, global paths
 │   ├── utils.py                  # functions
-│   └── validators.py             # 
+│   └── validators.py             # prediction validation functions and consistency checks
 ├── data/                         # data
 │   ├── wc_2026_teams.json        # team names, FIFA rankings, and confederations
 │   ├── predictions/
