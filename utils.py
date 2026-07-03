@@ -200,6 +200,16 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
             "    \"team_b_win\": float # Probability of team B winning in normal time\n"
             "  },"
         )
+        predict_schema = (
+            "  \"predicted_score\": \"string\", # e.g., \"2-1\" or \"1-1\" based on full time (90 min) score\n"
+            "  \"predicted_winner\": \"string\", # The winner team name or \"Draw\"\n"
+            "  \"knockout_resolution\": {\n"
+            "    \"ended_in_extra_time\": false,\n"
+            "    \"ended_in_penalties\": false,\n"
+            "    \"penalty_shootout_score\": null\n"
+            "  },\n"
+            "  \"confidence\": float\n"
+        )
         outcome_rules = "A group match can end in a Win, Loss, or Draw at the conclusion of normal time."
     else:
         probability_schema = (
@@ -207,6 +217,16 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
             "    \"team_a_advance\": float, # Total cumulative probability of team A advancing\n"
             "    \"team_b_advance\": float # Total cumulative probability of team B advancing\n"
             "  },"
+        )
+        predict_schema = (
+            "  \"predicted_score\": \"string\", # e.g., \"2-1\" or \"1-1\" based on full regular + extra time (120 min) score\n"
+            "  \"predicted_winner\": \"string\", # The winner team name\n"
+            "  \"knockout_resolution\": {\n"
+            "    \"ended_in_extra_time\": bool, # true if match resolved in extra time\n"
+            "    \"ended_in_penalties\": bool, # true if match resolved via penalty shootout\n"
+            "    \"penalty_shootout_score\": \"string\" # e.g., \"4-3\", or null if match resolved in regular/extra time\n"
+            "  },\n"
+            "  \"confidence\": float\n"
         )
         outcome_rules = (
             "A knockout match must always produce exactly ONE of the following valid outcomes:\n\n"
@@ -246,14 +266,7 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
         "or trailing explanations. Follow this exact JSON signature schema:\n"
         "{\n"
         + probability_schema + "\n"
-        "  \"predicted_score\": \"string\", # e.g., \"2-1\" or \"1-1\" based on full regular + extra time score\n"
-        "  \"predicted_winner\": \"string\", # The team name or \"Draw\" (Draw only valid for group stage entries)\n"
-        "  \"knockout_resolution\": {\n"
-        "    \"ended_in_extra_time\": bool, # true if match resolved in extra time\n"
-        "    \"ended_in_penalties\": bool, # true if match resolved via penalty shootout\n"
-        "    \"penalty_shootout_score\": \"string\" # e.g., \"4-3\", or null if match resolved in regular/extra time\n"
-        "  },\n"
-        "  \"confidence\": float\n"
+        + predict_schema +
         "}"
     )
         
