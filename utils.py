@@ -266,7 +266,7 @@ def create_prediction_prompt(team_a_data: dict, team_b_data: dict, host_country_
         "or trailing explanations. Follow this exact JSON signature schema:\n"
         "{\n"
         + probability_schema + "\n"
-        + predict_schema
+        + predict_schema +
         "}"
     )
         
