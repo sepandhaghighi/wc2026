@@ -1,0 +1,37 @@
+{
+    "match_id": "M90",
+    "simulation_env": {
+        "timestamp": "2026-07-04T11:51:26.481789Z",
+        "model": "meta/llama-4-scout-17b-16e-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Paraguay",
+        "team_b": "France",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.278,
+            "team_b_advance": 0.722
+        },
+        "predicted_score": "1-2",
+        "predicted_winner": "France",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
+    }
+}
