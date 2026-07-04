@@ -49,7 +49,7 @@ The benchmark currently evaluates the following models:
 - `meta/llama-4-scout-17b-16e-instruct`
 - `meta/llama-3.2-3b-instruct`
 
-Additional Workers AI models can be added by extending `MODEL_LIST` in `params.py`.
+Additional Workers AI models can be added by extending `MODEL_LIST` in `src/params.py`.
 
 ## Features
 
@@ -109,7 +109,7 @@ Each run saves two files: a **prediction** file with the match metadata, model, 
 
 ## Running a Benchmark
 
-Configure the match in `main.py`.
+Configure the match in `src/main.py`.
 
 ```python
 current_phase = Phase.GROUP.value
@@ -125,7 +125,7 @@ raw_match_id = "WC2026-M54"
 Run the benchmark:
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
@@ -133,15 +133,17 @@ The script downloads historical international results, computes team form statis
 
 ## Project Structure
 
-The main file is `main.py`, with the team list in a JSON file and all results collected under `data/`.
+The main file is `src/main.py`, with the team list in a JSON file and all results collected under `data/`.
 
 When you run the benchmark, it fills in `data/`. Results are grouped first by model and then by match, so it's easy to find a single prediction or compare the same match across models:
 
 ```text
 .
-├── main.py                       # the script that runs the benchmark
-├── params.py                     # constants, enums, global paths
-├── utils.py                      # functions
+├── src/                          # source code
+│   ├── main.py                   # the script that runs the benchmark
+│   ├── params.py                 # constants, enums, global paths
+│   ├── utils.py                  # functions
+│   └── validators.py             # prediction validation functions and consistency checks
 ├── data/                         # data
 │   ├── wc_2026_teams.json        # team names, FIFA rankings, and confederations
 │   ├── predictions/
