@@ -1181,5 +1181,18 @@
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
+    },
+    "M92": {
+        "phase": "knockout",
+        "round": "",
+        "date": "",
+        "team_a": "Mexico",
+        "team_b": "England",
+        "host_country": "Mexico",
+        "score": "",
+        "winner": "",
+        "ended_in_extra_time": false,
+        "ended_in_penalties": false,
+        "penalty_shootout_score": null
     }
 }
