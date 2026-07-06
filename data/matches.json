@@ -313,7 +313,7 @@
     },
     "M25": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Czech Republic",
         "team_b": "South Africa",
@@ -326,7 +326,7 @@
     },
     "M26": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Switzerland",
         "team_b": "Bosnia and Herzegovina",
@@ -339,7 +339,7 @@
     },
     "M27": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Canada",
         "team_b": "Qatar",
@@ -352,7 +352,7 @@
     },
     "M28": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Mexico",
         "team_b": "South Korea",
@@ -365,7 +365,7 @@
     },
     "M29": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "United States",
         "team_b": "Australia",
@@ -378,7 +378,7 @@
     },
     "M30": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Scotland",
         "team_b": "Morocco",
@@ -391,7 +391,7 @@
     },
     "M31": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Brazil",
         "team_b": "Haiti",
@@ -404,7 +404,7 @@
     },
     "M32": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Turkey",
         "team_b": "Paraguay",
@@ -417,7 +417,7 @@
     },
     "M33": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Netherlands",
         "team_b": "Sweden",
@@ -430,7 +430,7 @@
     },
     "M34": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Germany",
         "team_b": "Ivory Coast",
@@ -443,7 +443,7 @@
     },
     "M35": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Ecuador",
         "team_b": "Curaçao",
@@ -456,7 +456,7 @@
     },
     "M36": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Tunisia",
         "team_b": "Japan",
@@ -469,7 +469,7 @@
     },
     "M37": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Spain",
         "team_b": "Saudi Arabia",
@@ -482,7 +482,7 @@
     },
     "M38": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Belgium",
         "team_b": "Iran",
@@ -495,7 +495,7 @@
     },
     "M39": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Uruguay",
         "team_b": "Cape Verde",
@@ -508,7 +508,7 @@
     },
     "M40": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "New Zealand",
         "team_b": "Egypt",
@@ -521,7 +521,7 @@
     },
     "M41": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Argentina",
         "team_b": "Austria",
@@ -534,7 +534,7 @@
     },
     "M42": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "France",
         "team_b": "Iraq",
@@ -547,7 +547,7 @@
     },
     "M43": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Norway",
         "team_b": "Senegal",
@@ -560,7 +560,7 @@
     },
     "M44": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Jordan",
         "team_b": "Algeria",
@@ -573,7 +573,7 @@
     },
     "M45": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Portugal",
         "team_b": "Uzbekistan",
@@ -586,7 +586,7 @@
     },
     "M46": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "England",
         "team_b": "Ghana",
@@ -599,7 +599,7 @@
     },
     "M47": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Panama",
         "team_b": "Croatia",
@@ -612,7 +612,7 @@
     },
     "M48": {
         "phase": "group",
-        "round": "",
+        "round": "matchday-2",
         "date": "",
         "team_a": "Colombia",
         "team_b": "DR Congo",
