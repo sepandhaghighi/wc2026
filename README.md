@@ -169,3 +169,4 @@ LLMs do not possess predictive knowledge of future sporting events, and generate
 1. [FIFA Men's World Ranking](https://inside.fifa.com/fifa-world-ranking/men?dateId=FRS_Male_Football_20260401)
 2. [International Football Results](https://github.com/martj42/international_results)
 3. [FIFA WC2026 Simulation](https://github.com/zvizdo/fifa-wc-2026-simulation)
+4. [FIFA World Cup 2026 Matches](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=DE&wtw-filter=ALL)
