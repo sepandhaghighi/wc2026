@@ -1,0 +1,37 @@
+{
+    "match_id": "M95",
+    "simulation_env": {
+        "timestamp": "2026-07-07T14:14:01.672476Z",
+        "model": "qwen/qwen3-30b-a3b-fp8",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Argentina",
+        "team_b": "Egypt",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.7,
+            "team_b_advance": 0.3
+        },
+        "predicted_score": "2-1",
+        "predicted_winner": "Argentina",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.85
+    },
+    "post_processing": {
+        "performed": false,
+        "operations": []
+    }
+}

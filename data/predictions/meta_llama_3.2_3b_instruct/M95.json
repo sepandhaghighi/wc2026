@@ -1,0 +1,54 @@
+{
+    "match_id": "M95",
+    "simulation_env": {
+        "timestamp": "2026-07-07T14:14:49.286015Z",
+        "model": "meta/llama-3.2-3b-instruct",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "Argentina",
+        "team_b": "Egypt",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.9999999999999999,
+            "team_b_advance": 1e-16
+        },
+        "predicted_score": "1-0",
+        "predicted_winner": "Argentina",
+        "knockout_resolution": {
+            "ended_in_extra_time": false,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.9999999999999999
+    },
+    "post_processing": {
+        "performed": true,
+        "operations": [
+            {
+                "type": "resolution_fix",
+                "method": "resolve_knockout_draw",
+                "field": "prediction.predicted_winner",
+                "old_value": "Draw",
+                "new_value": "Argentina",
+                "reason": "Knockout matches cannot end in a draw. Winner was selected from the higher advance probability."
+            },
+            {
+                "type": "resolution_fix",
+                "method": "resolve_knockout_draw",
+                "field": "prediction.predicted_score",
+                "old_value": "1-1",
+                "new_value": "1-0",
+                "reason": "Predicted score was updated to match the selected winner after resolving an invalid knockout draw."
+            }
+        ]
+    }
+}
