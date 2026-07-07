@@ -1233,5 +1233,18 @@
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
+    },
+    "M96": {
+        "phase": "knockout",
+        "round": "",
+        "date": "",
+        "team_a": "Switzerland",
+        "team_b": "Colombia",
+        "host_country": "Canada",
+        "score": "",
+        "winner": "",
+        "ended_in_extra_time": false,
+        "ended_in_penalties": false,
+        "penalty_shootout_score": null
     }
 }
