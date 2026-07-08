@@ -937,7 +937,7 @@
     },
     "M73": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "South Africa",
         "team_b": "Canada",
@@ -950,7 +950,7 @@
     },
     "M74": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Brazil",
         "team_b": "Japan",
@@ -963,7 +963,7 @@
     },
     "M75": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Germany",
         "team_b": "Paraguay",
@@ -976,7 +976,7 @@
     },
     "M76": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Netherlands",
         "team_b": "Morocco",
@@ -989,7 +989,7 @@
     },
     "M77": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Ivory Coast",
         "team_b": "Norway",
@@ -1002,7 +1002,7 @@
     },
     "M78": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "France",
         "team_b": "Sweden",
@@ -1015,7 +1015,7 @@
     },
     "M79": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Mexico",
         "team_b": "Ecuador",
@@ -1028,7 +1028,7 @@
     },
     "M80": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "England",
         "team_b": "DR Congo",
@@ -1041,7 +1041,7 @@
     },
     "M81": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Belgium",
         "team_b": "Senegal",
@@ -1054,7 +1054,7 @@
     },
     "M82": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "United States",
         "team_b": "Bosnia and Herzegovina",
@@ -1067,7 +1067,7 @@
     },
     "M83": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Spain",
         "team_b": "Austria",
@@ -1080,7 +1080,7 @@
     },
     "M84": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Portugal",
         "team_b": "Croatia",
@@ -1093,7 +1093,7 @@
     },
     "M85": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Switzerland",
         "team_b": "Algeria",
@@ -1106,7 +1106,7 @@
     },
     "M86": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Australia",
         "team_b": "Egypt",
@@ -1119,7 +1119,7 @@
     },
     "M87": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Argentina",
         "team_b": "Cape Verde",
@@ -1132,7 +1132,7 @@
     },
     "M88": {
         "phase": "knockout",
-        "round": "",
+        "round": "round-of-32",
         "date": "",
         "team_a": "Colombia",
         "team_b": "Ghana",
