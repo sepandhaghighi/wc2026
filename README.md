@@ -71,9 +71,9 @@ This project plays out one match at a time, asking a handful of language models 
 ```json
 {
   "probabilities": {
-    "team_a_win": 0.0,
-    "draw": 0.0,
-    "team_b_win": 0.0
+    "team_a_win": 0.5,
+    "draw": 0.3,
+    "team_b_win": 0.2
   },
   "predicted_score": "2-1",
   "predicted_winner": "Team A",
@@ -82,7 +82,7 @@ This project plays out one match at a time, asking a handful of language models 
     "ended_in_penalties": false,
     "penalty_shootout_score": null
   },
-  "confidence": 0.0
+  "confidence": 0.8
 }
 ```
 
@@ -91,17 +91,17 @@ This project plays out one match at a time, asking a handful of language models 
 ```json
 {
   "probabilities": {
-    "team_a_advance": 0.0,
-    "team_b_advance": 0.0
+    "team_a_advance": 0.7,
+    "team_b_advance": 0.3
   },
   "predicted_score": "1-1",
   "predicted_winner": "Team A",
   "knockout_resolution": {
-    "ended_in_extra_time": true,
-    "ended_in_penalties": false,
-    "penalty_shootout_score": null
+    "ended_in_extra_time": false,
+    "ended_in_penalties": true,
+    "penalty_shootout_score": "5-2"
   },
-  "confidence": 0.0
+  "confidence": 0.75
 }
 ```
 
