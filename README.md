@@ -109,7 +109,7 @@ Each run saves two files: a **prediction** file with the match metadata, model, 
 
 ## Running a Benchmark
 
-Configure the match in `src/main.py`.
+Configure the match in `src/run.py`.
 
 ```python
 current_phase = Phase.GROUP.value
@@ -125,7 +125,7 @@ raw_match_id = "WC2026-M54"
 Run the benchmark:
 
 ```bash
-python src/main.py
+python src/run.py
 ```
 
 The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
@@ -133,14 +133,12 @@ The script downloads historical international results, computes team form statis
 
 ## Project Structure
 
-The main file is `src/main.py`, with the team list in a JSON file and all results collected under `data/`.
-
 When you run the benchmark, it fills in `data/`. Results are grouped first by model and then by match, so it's easy to find a single prediction or compare the same match across models:
 
 ```text
 .
 ├── src/                          # source code
-│   ├── main.py                   # the script that runs the benchmark
+│   ├── run.py                    # the script that runs the benchmark
 │   ├── params.py                 # constants, enums, global paths
 │   ├── utils.py                  # functions
 │   └── validators.py             # prediction validation functions and consistency checks
