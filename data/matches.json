@@ -1263,12 +1263,12 @@
     "M98": {
         "phase": "knockout",
         "round": "quarter-final",
-        "date": "",
+        "date": "2026-07-10",
         "team_a": "Spain",
         "team_b": "Belgium",
         "host_country": "United States",
-        "score": "",
-        "winner": "",
+        "score": "2-1",
+        "winner": "Spain",
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
