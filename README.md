@@ -144,7 +144,7 @@ When you run the benchmark, it fills in `data/`. Results are grouped first by mo
 │   └── validators.py             # prediction validation functions and consistency checks
 ├── data/                         # data
 │   ├── matches.json              # official WC2026 results
-│   ├── wc_2026_teams.json        # team names, FIFA rankings, and confederations
+│   ├── teams.json                # team names, FIFA rankings, and confederations
 │   ├── predictions/
 │   │   └── <model_name>/
 │   │       └── <match_id>.json   # what the model predicted
