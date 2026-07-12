@@ -243,6 +243,16 @@ def validate_semantics(data):
         home, away = parse_score(score)
     except ValueError as exc:
         return [str(exc)]
+    
+    errors.extend(
+        validate_score_winner_alignment(
+            team_a=team_a,
+            team_b=team_b,
+            predicted_score=score,
+            predicted_winner=winner,
+            phase=phase,
+        )
+    )
 
     tied = home == away
 
