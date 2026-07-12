@@ -1298,5 +1298,18 @@
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
+    },
+    "M101": {
+        "phase": "knockout",
+        "round": "",
+        "date": "",
+        "team_a": "France",
+        "team_b": "Spain",
+        "host_country": "United States",
+        "score": "",
+        "winner": "",
+        "ended_in_extra_time": false,
+        "ended_in_penalties": false,
+        "penalty_shootout_score": null
     }
 }
