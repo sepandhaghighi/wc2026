@@ -54,15 +54,13 @@ def validate_score_winner_alignment(team_a, team_b, predicted_score, predicted_w
 
     home_score, away_score = parse_score(predicted_score)
 
+    if home_score > away_score and predicted_winner != team_a:
+        errors.append("Predicted score indicates Team A victory but predicted_winner does not match.")
+    elif away_score > home_score and predicted_winner != team_b:
+        errors.append("Predicted score indicates Team B victory but predicted_winner does not match.")
     if phase == "group":
-        if home_score > away_score and predicted_winner != team_a:
-            errors.append("Predicted score indicates Team A victory but predicted_winner does not match.")
-        elif away_score > home_score and predicted_winner != team_b:
-            errors.append("Predicted score indicates Team B victory but predicted_winner does not match.")
-        elif home_score == away_score and predicted_winner != "Draw":
+        if home_score == away_score and predicted_winner != "Draw":
             errors.append("Predicted score indicates a draw but predicted_winner is inconsistent.")
-    else:
-        resolution = None
     return errors
 
 
