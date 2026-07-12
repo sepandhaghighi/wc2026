@@ -149,8 +149,8 @@ def validate_structure(data):
     if missing:
         errors.append(f"prediction missing keys: {sorted(missing)}")
 
-    if "confidence" in pred and not is_number(pred["confidence"]):
-        errors.append("'confidence' must be numeric.")
+    if "confidence" in pred:
+        errors.extend(validate_confidence(pred["confidence"]))
 
     if ("predicted_score" in pred and not isinstance(pred["predicted_score"], str)):
         errors.append("'predicted_score' must be a string.")
