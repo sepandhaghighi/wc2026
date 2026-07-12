@@ -29,7 +29,7 @@
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "confidence": 75.0
+        "confidence": 0.75
     },
     "post_processing": {
         "performed": true,
@@ -49,6 +49,14 @@
                     "team_b_win": 0.5
                 },
                 "reason": "Probability values were expressed as percentages instead of decimal probabilities."
+            },
+            {
+                "type": "constraint_fix",
+                "method": "convert_percentage_confidence",
+                "field": "prediction.confidence",
+                "old_value": 75.0,
+                "new_value": 0.75,
+                "reason": "Confidence was expressed as a percentage instead of a decimal probability."
             }
         ]
     }
