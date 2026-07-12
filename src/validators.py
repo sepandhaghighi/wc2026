@@ -23,6 +23,22 @@ def parse_score(score):
     return home, away
 
 
+def validate_confidence(confidence):
+    """
+    Validates that confidence is a numeric probability within the closed interval [0, 1].
+
+    :param confidence: Confidence value extracted from the prediction payload.
+    :return: A list of validation errors (empty if valid).
+    """
+    errors = []
+
+    if not is_number(confidence):
+        errors.append("'confidence' must be numeric.")
+    elif confidence < 0 or confidence > 1:
+        errors.append("'confidence' must be between 0 and 1.")
+    return errors
+
+
 def validate_structure(data):
     errors = []
 
