@@ -71,9 +71,9 @@ This project plays out one match at a time, asking a handful of language models 
 ```json
 {
   "probabilities": {
-    "team_a_win": 0.0,
-    "draw": 0.0,
-    "team_b_win": 0.0
+    "team_a_win": 0.5,
+    "draw": 0.3,
+    "team_b_win": 0.2
   },
   "predicted_score": "2-1",
   "predicted_winner": "Team A",
@@ -82,7 +82,7 @@ This project plays out one match at a time, asking a handful of language models 
     "ended_in_penalties": false,
     "penalty_shootout_score": null
   },
-  "confidence": 0.0
+  "confidence": 0.8
 }
 ```
 
@@ -91,17 +91,17 @@ This project plays out one match at a time, asking a handful of language models 
 ```json
 {
   "probabilities": {
-    "team_a_advance": 0.0,
-    "team_b_advance": 0.0
+    "team_a_advance": 0.7,
+    "team_b_advance": 0.3
   },
   "predicted_score": "1-1",
   "predicted_winner": "Team A",
   "knockout_resolution": {
-    "ended_in_extra_time": true,
-    "ended_in_penalties": false,
-    "penalty_shootout_score": null
+    "ended_in_extra_time": false,
+    "ended_in_penalties": true,
+    "penalty_shootout_score": "5-2"
   },
-  "confidence": 0.0
+  "confidence": 0.75
 }
 ```
 
@@ -109,7 +109,7 @@ Each run saves two files: a **prediction** file with the match metadata, model, 
 
 ## Running a Benchmark
 
-Configure the match in `src/main.py`.
+Configure the match in `src/run.py`.
 
 ```python
 current_phase = Phase.GROUP.value
@@ -125,7 +125,7 @@ raw_match_id = "WC2026-M54"
 Run the benchmark:
 
 ```bash
-python src/main.py
+python src/run.py
 ```
 
 The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
@@ -133,20 +133,18 @@ The script downloads historical international results, computes team form statis
 
 ## Project Structure
 
-The main file is `src/main.py`, with the team list in a JSON file and all results collected under `data/`.
-
 When you run the benchmark, it fills in `data/`. Results are grouped first by model and then by match, so it's easy to find a single prediction or compare the same match across models:
 
 ```text
 .
 ├── src/                          # source code
-│   ├── main.py                   # the script that runs the benchmark
+│   ├── run.py                    # the script that runs the benchmark
 │   ├── params.py                 # constants, enums, global paths
 │   ├── utils.py                  # functions
 │   └── validators.py             # prediction validation functions and consistency checks
 ├── data/                         # data
 │   ├── matches.json              # official WC2026 results
-│   ├── wc_2026_teams.json        # team names, FIFA rankings, and confederations
+│   ├── teams.json                # team names, FIFA rankings, and confederations
 │   ├── predictions/
 │   │   └── <model_name>/
 │   │       └── <match_id>.json   # what the model predicted
