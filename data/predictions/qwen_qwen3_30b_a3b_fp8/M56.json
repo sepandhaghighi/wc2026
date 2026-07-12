@@ -22,7 +22,7 @@
             "draw": 0.25,
             "team_b_win": 0.55
         },
-        "predicted_score": "1-0",
+        "predicted_score": "0-1",
         "predicted_winner": "Germany",
         "knockout_resolution": {
             "ended_in_extra_time": false,
@@ -32,7 +32,16 @@
         "confidence": 0.75
     },
     "post_processing": {
-        "performed": false,
-        "operations": []
+        "performed": true,
+        "operations": [
+            {
+                "type": "constraint_fix",
+                "method": "swap_score_order",
+                "field": "prediction.predicted_score",
+                "old_value": "1-0",
+                "new_value": "0-1",
+                "reason": "Predicted score order was corrected to match the benchmark convention."
+            }
+        ]
     }
 }

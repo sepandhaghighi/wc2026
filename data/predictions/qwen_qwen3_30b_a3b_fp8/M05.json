@@ -23,7 +23,7 @@
             "ended_in_penalties": false,
             "penalty_shootout_score": null
         },
-        "predicted_score": "2-1",
+        "predicted_score": "1-2",
         "predicted_winner": "Switzerland",
         "probabilities": {
             "draw": 0.3,
@@ -32,7 +32,16 @@
         }
     },
     "post_processing": {
-        "performed": false,
-        "operations": []
+        "performed": true,
+        "operations": [
+            {
+                "type": "constraint_fix",
+                "method": "swap_score_order",
+                "field": "prediction.predicted_score",
+                "old_value": "2-1",
+                "new_value": "1-2",
+                "reason": "Predicted score order was corrected to match the benchmark convention."
+            }
+        ]
     }
 }
