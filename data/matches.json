@@ -1311,5 +1311,18 @@
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
+    },
+    "M102": {
+        "phase": "knockout",
+        "round": "",
+        "date": "",
+        "team_a": "England",
+        "team_b": "Argentina",
+        "host_country": "United States",
+        "score": "",
+        "winner": "",
+        "ended_in_extra_time": false,
+        "ended_in_penalties": false,
+        "penalty_shootout_score": null
     }
 }
