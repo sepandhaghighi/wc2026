@@ -39,6 +39,31 @@ def validate_confidence(confidence):
     return errors
 
 
+def validate_score_winner_alignment(team_a, team_b, predicted_score, predicted_winner, phase):
+    """
+    Validates that the predicted winner is logically consistent with the predicted score.
+
+    :param team_a: Name of Team A.
+    :param team_b: Name of Team B.
+    :param predicted_score: Predicted score string.
+    :param predicted_winner: Predicted winner string.
+    :param phase: Tournament phase.
+    :return: A list of validation errors (empty if valid).
+    """
+    errors = []
+
+    home_score, away_score = parse_score(predicted_score)
+
+    if home_score > away_score and predicted_winner != team_a:
+        errors.append("Predicted score indicates Team A victory but predicted_winner does not match.")
+    elif away_score > home_score and predicted_winner != team_b:
+        errors.append("Predicted score indicates Team B victory but predicted_winner does not match.")
+    if phase == "group":
+        if home_score == away_score and predicted_winner != "Draw":
+            errors.append("Predicted score indicates a draw but predicted_winner is inconsistent.")
+    return errors
+
+
 def validate_structure(data):
     errors = []
 
@@ -216,6 +241,16 @@ def validate_semantics(data):
         home, away = parse_score(score)
     except ValueError as exc:
         return [str(exc)]
+    
+    errors.extend(
+        validate_score_winner_alignment(
+            team_a=team_a,
+            team_b=team_b,
+            predicted_score=score,
+            predicted_winner=winner,
+            phase=phase,
+        )
+    )
 
     tied = home == away
 

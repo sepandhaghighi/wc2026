@@ -22,7 +22,7 @@
             "draw": 0.05,
             "team_b_win": 0.85
         },
-        "predicted_score": "3-1",
+        "predicted_score": "1-3",
         "predicted_winner": "Argentina",
         "knockout_resolution": {
             "ended_in_extra_time": false,
@@ -32,7 +32,16 @@
         "confidence": 0.9
     },
     "post_processing": {
-        "performed": false,
-        "operations": []
+        "performed": true,
+        "operations": [
+            {
+                "type": "constraint_fix",
+                "method": "swap_score_order",
+                "field": "prediction.predicted_score",
+                "old_value": "3-1",
+                "new_value": "1-3",
+                "reason": "Predicted score order was corrected to match the benchmark convention."
+            }
+        ]
     }
 }
