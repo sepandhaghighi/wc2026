@@ -139,7 +139,7 @@ if __name__ == "__main__":
                 predicted_score=prediction["prediction"]["predicted_score"],
                 probabilities=prediction["prediction"]["probabilities"],
             )
-        except Exception as e:
+        except Exception as exc:
             print(f"[WARNING] Failed to evaluate Match ID '{match_id}' for model '{model}'. Evaluation skipped. Reason: {exc}")
             continue
 
