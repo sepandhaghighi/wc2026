@@ -132,12 +132,16 @@ if __name__ == "__main__":
 
         model = prediction["simulation_env"]["model"]
 
-        metrics = evaluate_prediction(
-            phase=official["phase"],
-            true_score=official["score"],
-            predicted_score=prediction["prediction"]["predicted_score"],
-            probabilities=prediction["prediction"]["probabilities"],
-        )
+        try:
+            metrics = evaluate_prediction(
+                phase=official["phase"],
+                true_score=official["score"],
+                predicted_score=prediction["prediction"]["predicted_score"],
+                probabilities=prediction["prediction"]["probabilities"],
+            )
+        except Exception as e:
+            print(f"[WARNING] Failed to evaluate Match ID '{match_id}' for model '{model}'. Evaluation skipped. Reason: {exc}")
+            continue
 
         metrics["match_id"] = match_id
         metrics["model"] = model
