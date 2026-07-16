@@ -117,52 +117,40 @@ def build_leaderboard_table(
 
 def create_leaderboard(metrics: dict) -> str:
     """
-    Creates a markdown leaderboard summarizing model performance.
+    Creates markdown leaderboard separated by tournament stages.
 
-    :param metrics: Aggregated model metrics.
+    :param metrics: Aggregated metrics by stage.
     :return: Markdown leaderboard.
     """
-    rows = []
-
-    for model, values in metrics.items():
-
-        rows.append(
-            (
-                model,
-                values["outcome_accuracy"],
-                values["exact_score_accuracy"],
-                values["goal_mae"],
-                values["goal_difference_mae"],
-                values["brier_score"],
-                values["log_loss"],
-            )
-        )
-
-    rows.sort(
-        key=lambda item: (
-            -item[1],
-            -item[2],
-            item[3],
-            item[4],
-            item[5],
-            item[6],
-        )
-    )
 
     markdown = []
 
     markdown.append("# World Cup 2026 Benchmark Results")
     markdown.append("")
-    markdown.append("| Model | Outcome | Exact | Goal MAE | GD MAE | Brier | LogLoss |")
-    markdown.append("|-------|----------:|--------:|-----------:|----------:|---------:|----------:|")
 
-    for row in rows:
-
-        markdown.append(
-            "| {} | {:.3f} | {:.3f} | {:.3f} | {:.3f} | {:.4f} | {:.4f} |".format(
-                *row
-            )
+    markdown.extend(
+        build_leaderboard_table(
+            "1. Group Stage",
+            metrics["group"],
+            include_probability_metrics=True,
         )
+    )
+
+    markdown.extend(
+        build_leaderboard_table(
+            "2. Knockout Stage",
+            metrics["knockout"],
+            include_probability_metrics=True,
+        )
+    )
+
+    markdown.extend(
+        build_leaderboard_table(
+            "3. Overall",
+            metrics["overall"],
+            include_probability_metrics=False,
+        )
+    )
 
     return "\n".join(markdown)
 
