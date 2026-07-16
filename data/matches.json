@@ -1315,12 +1315,12 @@
     "M102": {
         "phase": "knockout",
         "round": "semi-final",
-        "date": "",
+        "date": "2026-07-15",
         "team_a": "England",
         "team_b": "Argentina",
         "host_country": "United States",
-        "score": "",
-        "winner": "",
+        "score": "1-2",
+        "winner": "Argentina",
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
