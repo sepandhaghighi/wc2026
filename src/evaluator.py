@@ -148,7 +148,7 @@ def create_leaderboard(metrics: dict) -> str:
         build_leaderboard_table(
             "3. Overall",
             metrics["overall"],
-            include_probability_metrics=False,
+            include_probability_metrics=True,
         )
     )
 
@@ -203,11 +203,32 @@ if __name__ == "__main__":
 
         model_results.setdefault(model, []).append(metrics)
 
-    aggregated = {}
+    aggregated = {
+        "group": {},
+        "knockout": {},
+        "overall": {},
+    }
+
 
     for model, rows in model_results.items():
 
-        aggregated[model] = aggregate_metrics(rows)
+        group_rows = [
+            row for row in rows
+            if row["match_id"] in ground_truth
+            and ground_truth[row["match_id"]]["phase"] == "group"
+        ]
+
+        knockout_rows = [
+            row for row in rows
+            if row["match_id"] in ground_truth
+            and ground_truth[row["match_id"]]["phase"] != "group"
+        ]
+
+        aggregated["group"][model] = aggregate_metrics(group_rows)
+
+        aggregated["knockout"][model] = aggregate_metrics(knockout_rows)
+
+        aggregated["overall"][model] = aggregate_metrics(rows)
 
     with open(EVALUATION_DIR / "metrics.json", "w", encoding="utf-8") as file:
         json.dump(aggregated, file, indent=4, ensure_ascii=False)
