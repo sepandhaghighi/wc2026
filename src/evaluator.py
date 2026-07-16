@@ -50,6 +50,71 @@ def aggregate_metrics(metric_rows: list) -> dict:
     }
 
 
+def build_leaderboard_table(
+    title: str,
+    data: dict,
+    include_probability_metrics: bool = True
+) -> list:
+    """
+    Builds a markdown table section for leaderboard output.
+
+    :param title: Section title.
+    :param data: Metrics grouped by model.
+    :param include_probability_metrics: Whether to include Brier and LogLoss.
+    :return: List of markdown lines.
+    """
+
+    rows = []
+
+    for model, values in data.items():
+
+        row = (
+            model,
+            values["outcome_accuracy"],
+            values["exact_score_accuracy"],
+            values["goal_mae"],
+            values["goal_difference_mae"],
+        )
+
+        if include_probability_metrics:
+            row += (values["brier_score"], values["log_loss"])
+        rows.append(row)
+
+    rows.sort(
+        key=lambda item: (
+            -item[1],
+            -item[2],
+            item[3],
+            item[4],
+        )
+    )
+
+    markdown = []
+
+    markdown.append(f"## {title}")
+    markdown.append("")
+
+    if include_probability_metrics:
+
+        markdown.append("| Model | Outcome | Exact | Goal MAE | GD MAE | Brier | LogLoss |")
+        markdown.append("|-------|----------:|--------:|-----------:|----------:|---------:|----------:|")
+
+        for row in rows:
+            markdown.append("| {} | {:.3f} | {:.3f} | {:.3f} | {:.3f} | {:.4f} | {:.4f} |".format(*row))
+
+    else:
+
+        markdown.append("| Model | Outcome | Exact | Goal MAE | GD MAE |")
+        markdown.append("|-------|----------:|--------:|-----------:|----------:|")
+
+        for row in rows:
+            markdown.append("| {} | {:.3f} | {:.3f} | {:.3f} | {:.3f} |".format(*row))
+
+    markdown.append("")
+
+    return markdown
+
+
 def create_leaderboard(metrics: dict) -> str:
     """
     Creates a markdown leaderboard summarizing model performance.
