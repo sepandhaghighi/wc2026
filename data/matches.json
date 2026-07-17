@@ -1324,5 +1324,19 @@
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
+    },
+    "M103": {
+        "phase": "knockout",
+        "round": "",
+        "date": "",
+        "team_a": "France",
+        "team_b": "England",
+        "host_country": "United States",
+        "score": "",
+        "winner": "",
+        "ended_in_extra_time": false,
+        "ended_in_penalties": false,
+        "penalty_shootout_score": null
     }
+
 }
