@@ -1,0 +1,46 @@
+{
+    "match_id": "M103",
+    "simulation_env": {
+        "timestamp": "2026-07-17T22:53:26.968085Z",
+        "model": "qwen/qwen3-30b-a3b-fp8",
+        "hyperparameters": {
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "max_tokens": 7000
+        }
+    },
+    "match_context": {
+        "tournament": "FIFA World Cup 2026",
+        "phase": "knockout",
+        "team_a": "France",
+        "team_b": "England",
+        "host_country": "United States"
+    },
+    "prediction": {
+        "probabilities": {
+            "team_a_advance": 0.52,
+            "team_b_advance": 0.48
+        },
+        "predicted_score": "1-0",
+        "predicted_winner": "France",
+        "knockout_resolution": {
+            "ended_in_extra_time": true,
+            "ended_in_penalties": false,
+            "penalty_shootout_score": null
+        },
+        "confidence": 0.7
+    },
+    "post_processing": {
+        "performed": true,
+        "operations": [
+            {
+                "type": "resolution_fix",
+                "method": "resolve_knockout_draw",
+                "field": "prediction.predicted_score",
+                "old_value": "1-1",
+                "new_value": "1-0",
+                "reason": "Predicted score was updated to match the selected winner."
+            }
+        ]
+    }
+}
