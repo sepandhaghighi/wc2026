@@ -50,28 +50,35 @@ def aggregate_metrics(metric_rows: list) -> dict:
     }
 
 
-def create_leaderboard(metrics: dict) -> str:
+def build_leaderboard_table(
+    title: str,
+    data: dict,
+    include_probability_metrics: bool = True
+) -> list:
     """
-    Creates a markdown leaderboard summarizing model performance.
+    Builds a markdown table section for leaderboard output.
 
-    :param metrics: Aggregated model metrics.
-    :return: Markdown leaderboard.
+    :param title: Section title.
+    :param data: Metrics grouped by model.
+    :param include_probability_metrics: Whether to include Brier and LogLoss.
+    :return: List of markdown lines.
     """
+
     rows = []
 
-    for model, values in metrics.items():
+    for model, values in data.items():
 
-        rows.append(
-            (
-                model,
-                values["outcome_accuracy"],
-                values["exact_score_accuracy"],
-                values["goal_mae"],
-                values["goal_difference_mae"],
-                values["brier_score"],
-                values["log_loss"],
-            )
+        row = (
+            model,
+            values["outcome_accuracy"],
+            values["exact_score_accuracy"],
+            values["goal_mae"],
+            values["goal_difference_mae"],
         )
+
+        if include_probability_metrics:
+            row += (values["brier_score"], values["log_loss"])
+        rows.append(row)
 
     rows.sort(
         key=lambda item: (
@@ -79,25 +86,71 @@ def create_leaderboard(metrics: dict) -> str:
             -item[2],
             item[3],
             item[4],
-            item[5],
-            item[6],
         )
     )
 
     markdown = []
 
+    markdown.append(f"## {title}")
+    markdown.append("")
+
+    if include_probability_metrics:
+
+        markdown.append("| Model | Outcome | Exact | Goal MAE | GD MAE | Brier | LogLoss |")
+        markdown.append("|-------|----------:|--------:|-----------:|----------:|---------:|----------:|")
+
+        for row in rows:
+            markdown.append("| {} | {:.3f} | {:.3f} | {:.3f} | {:.3f} | {:.4f} | {:.4f} |".format(*row))
+
+    else:
+
+        markdown.append("| Model | Outcome | Exact | Goal MAE | GD MAE |")
+        markdown.append("|-------|----------:|--------:|-----------:|----------:|")
+
+        for row in rows:
+            markdown.append("| {} | {:.3f} | {:.3f} | {:.3f} | {:.3f} |".format(*row))
+
+    markdown.append("")
+
+    return markdown
+
+
+def create_leaderboard(metrics: dict) -> str:
+    """
+    Creates markdown leaderboard separated by tournament stages.
+
+    :param metrics: Aggregated metrics by stage.
+    :return: Markdown leaderboard.
+    """
+
+    markdown = []
+
     markdown.append("# World Cup 2026 Benchmark Results")
     markdown.append("")
-    markdown.append("| Model | Outcome | Exact | Goal MAE | GD MAE | Brier | LogLoss |")
-    markdown.append("|-------|----------:|--------:|-----------:|----------:|---------:|----------:|")
 
-    for row in rows:
-
-        markdown.append(
-            "| {} | {:.3f} | {:.3f} | {:.3f} | {:.3f} | {:.4f} | {:.4f} |".format(
-                *row
-            )
+    markdown.extend(
+        build_leaderboard_table(
+            "1. Group Stage",
+            metrics["group"],
+            include_probability_metrics=True,
         )
+    )
+
+    markdown.extend(
+        build_leaderboard_table(
+            "2. Knockout Stage",
+            metrics["knockout"],
+            include_probability_metrics=True,
+        )
+    )
+
+    markdown.extend(
+        build_leaderboard_table(
+            "3. Overall",
+            metrics["overall"],
+            include_probability_metrics=True,
+        )
+    )
 
     return "\n".join(markdown)
 
@@ -150,11 +203,32 @@ if __name__ == "__main__":
 
         model_results.setdefault(model, []).append(metrics)
 
-    aggregated = {}
+    aggregated = {
+        "group": {},
+        "knockout": {},
+        "overall": {},
+    }
+
 
     for model, rows in model_results.items():
 
-        aggregated[model] = aggregate_metrics(rows)
+        group_rows = [
+            row for row in rows
+            if row["match_id"] in ground_truth
+            and ground_truth[row["match_id"]]["phase"] == "group"
+        ]
+
+        knockout_rows = [
+            row for row in rows
+            if row["match_id"] in ground_truth
+            and ground_truth[row["match_id"]]["phase"] != "group"
+        ]
+
+        aggregated["group"][model] = aggregate_metrics(group_rows)
+
+        aggregated["knockout"][model] = aggregate_metrics(knockout_rows)
+
+        aggregated["overall"][model] = aggregate_metrics(rows)
 
     with open(EVALUATION_DIR / "metrics.json", "w", encoding="utf-8") as file:
         json.dump(aggregated, file, indent=4, ensure_ascii=False)
