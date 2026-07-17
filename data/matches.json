@@ -1337,6 +1337,18 @@
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
+    },
+    "M104": {
+        "phase": "knockout",
+        "round": "",
+        "date": "",
+        "team_a": "Spain",
+        "team_b": "Argentina",
+        "host_country": "United States",
+        "score": "",
+        "winner": "",
+        "ended_in_extra_time": false,
+        "ended_in_penalties": false,
+        "penalty_shootout_score": null
     }
-
 }
