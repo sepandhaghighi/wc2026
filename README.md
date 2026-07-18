@@ -59,6 +59,8 @@ Additional Workers AI models can be added by extending `MODEL_LIST` in `src/para
 
 This project plays out one match at a time, asking a handful of language models to predict each result. Every model sees the same prompt and the same data, so their predictions line up cleanly for comparison. To keep that reasoning grounded, each team's recent form is drawn from real international match history and paired with its FIFA ranking and confederation. The models' answers are saved alongside the full conversation that produced them, so every prediction stays easy to analyze and trace back.
 
+The benchmark also includes an evaluation pipeline that measures prediction quality using multiple statistical metrics and generates comparable leaderboards across models and tournament stages.
+
 - ⚽ Supports both group-stage and knockout-stage matches
 - 🤖 Evaluates multiple LLMs under identical conditions
 - 📈 Uses recent international match history to estimate team form
@@ -66,6 +68,8 @@ This project plays out one match at a time, asking a handful of language models 
 - 🌎 Includes host-country context
 - 🧾 Produces structured JSON predictions
 - 💾 Stores complete Memor sessions for reproducibility
+- 📊 Evaluates predictions using multiple accuracy and calibration metrics
+- 🏅 Generates leaderboard rankings across models
 - 🔁 Allows repeated experiments with different models and matches
 
 ## Prediction Schema
