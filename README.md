@@ -9,8 +9,12 @@
 
 ## Overview	
 
+## Overview	
+
 This project benchmarks Large Language Models (LLMs) on FIFA World Cup 2026 match prediction tasks.
 Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) and stored together with their complete inference sessions for reproducibility and later analysis.
+
+The benchmark includes an evaluation pipeline that compares model predictions against official match results and generates detailed performance metrics and leaderboard rankings across different tournament stages.
 
 ## Getting Started
 
