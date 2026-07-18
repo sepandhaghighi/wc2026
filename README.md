@@ -139,6 +139,30 @@ python src/run.py
 The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
 
 
+## Evaluation
+
+The benchmark includes an evaluation pipeline that compares generated predictions with official match results and calculates performance metrics for each model.
+
+Run:
+
+```bash
+python src/evaluate.py
+```
+
+The evaluator processes all prediction files stored in `data/predictions/` and produces match-level and model-level evaluation results.
+
+### Evaluation Metrics
+
+The benchmark reports:
+
+- **Outcome Accuracy** - Percentage of correctly predicted match outcomes.
+- **Exact Score Accuracy** - Percentage of predictions matching the final score exactly.
+- **Goal MAE** - Mean absolute error between predicted and actual goals.
+- **Goal Difference MAE** - Mean absolute error between predicted and actual goal differences.
+- **Brier Score** - Measures the quality of predicted outcome probabilities (lower is better).
+- **Log Loss** - Measures probability calibration quality (lower is better).
+
+
 ## Project Structure
 
 When you run the benchmark, it fills in `data/`. Results are grouped first by model and then by match, so it's easy to find a single prediction or compare the same match across models:
