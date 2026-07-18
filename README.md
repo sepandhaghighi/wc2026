@@ -115,7 +115,7 @@ Configure the match in `src/run.py`.
 current_phase = Phase.GROUP.value
 
 team_a = Team.CZECH_REPUBLIC.value
-country_b = Team.MEXICO.value
+team_b = Team.MEXICO.value
 
 match_host = Host.MEXICO.value
 

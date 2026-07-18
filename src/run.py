@@ -11,11 +11,11 @@ if __name__ == "__main__":
     match_id = raw_match_id.replace("WC2026-", "") if "WC2026-" in raw_match_id else raw_match_id
     
     team_a = Team.SPAIN.value
-    country_b = Team.ARGENTINA.value
+    team_b = Team.ARGENTINA.value
     match_host = Host.USA.value
     international_results_df = pd.read_csv(HISTORICAL_RESULTS_URL)
     team_a_metrics = fetch_true_national_team_form(international_results_df, team_a, last_n=15)
-    team_b_metrics = fetch_true_national_team_form(international_results_df, country_b, last_n=15)
+    team_b_metrics = fetch_true_national_team_form(international_results_df, team_b, last_n=15)
 
     print("Team A Metrics:")
     pprint(team_a_metrics)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
                 "tournament": "FIFA World Cup 2026",
                 "match_phase": current_phase,
                 "team_a": team_a,
-                "team_b": country_b,
+                "team_b": team_b,
                 "host_country": match_host,
                 "temperature": TEMPERATURE,
                 "top_p": TOP_P,
