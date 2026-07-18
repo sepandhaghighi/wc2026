@@ -192,7 +192,7 @@ if __name__ == "__main__":
                 true_score=official["score"],
                 predicted_score=prediction["prediction"]["predicted_score"],
                 true_outcome=official["winner"],
-                predicted_outcome=prediction["prediction"]["winner"],
+                predicted_outcome=prediction["prediction"]["predicted_winner"],
                 probabilities=prediction["prediction"]["probabilities"],
             )
         except Exception as exc:
