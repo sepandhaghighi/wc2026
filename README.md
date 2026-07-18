@@ -170,19 +170,25 @@ When you run the benchmark, it fills in `data/`. Results are grouped first by mo
 ```text
 .
 ├── src/                          # source code
-│   ├── run.py                    # the script that runs the benchmark
+│   ├── run.py                    # runs benchmark predictions
+│   ├── evaluate.py               # evaluates stored predictions
+│   ├── metrics.py                # evaluation metrics
 │   ├── params.py                 # constants, enums, global paths
-│   ├── utils.py                  # functions
+│   ├── utils.py                  # helper functions
 │   └── validators.py             # prediction validation functions and consistency checks
-├── data/                         # data
+├── data/
 │   ├── matches.json              # official WC2026 results
 │   ├── teams.json                # team names, FIFA rankings, and confederations
 │   ├── predictions/
 │   │   └── <model_name>/
-│   │       └── <match_id>.json   # what the model predicted
-│   └── sessions/
-│       └── <model_name>/
-│           └── <match_id>.json   # the prompt and reply that produced it
+│   │       └── <match_id>.json   # model prediction output
+│   ├── sessions/
+│   │   └── <model_name>/
+│   │       └── <match_id>.json   # full inference session
+│   └── evaluation/
+│       ├── metrics.json          # aggregated benchmark metrics
+│       ├── per_match.csv         # match-level metrics
+│       └── leaderboard.md        # leaderboard tables
 ├── requirements.txt
 └── README.md
 ```
