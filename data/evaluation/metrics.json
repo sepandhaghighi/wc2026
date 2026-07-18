@@ -1,0 +1,224 @@
+{
+    "group": {
+        "aisingapore/gemma-sea-lion-v4-27b-it": {
+            "matches": 72,
+            "exact_score_accuracy": 0.125,
+            "goal_mae": 0.9027777777777778,
+            "goal_difference_mae": 1.2222222222222223,
+            "outcome_accuracy": 0.625,
+            "brier_score": 0.500275,
+            "log_loss": 0.8480200930951316
+        },
+        "meta/llama-3.1-8b-instruct-fast": {
+            "matches": 72,
+            "exact_score_accuracy": 0.09722222222222222,
+            "goal_mae": 0.9722222222222222,
+            "goal_difference_mae": 1.3888888888888888,
+            "outcome_accuracy": 0.5,
+            "brier_score": 0.5397339166666667,
+            "log_loss": 0.9031026799051362
+        },
+        "meta/llama-3.2-3b-instruct": {
+            "matches": 72,
+            "exact_score_accuracy": 0.125,
+            "goal_mae": 1.0486111111111112,
+            "goal_difference_mae": 1.625,
+            "outcome_accuracy": 0.2916666666666667,
+            "brier_score": 0.5805166666666667,
+            "log_loss": 0.9610959943865472
+        },
+        "meta/llama-4-scout-17b-16e-instruct": {
+            "matches": 72,
+            "exact_score_accuracy": 0.125,
+            "goal_mae": 0.8958333333333334,
+            "goal_difference_mae": 1.1805555555555556,
+            "outcome_accuracy": 0.6944444444444444,
+            "brier_score": 0.5342027777777778,
+            "log_loss": 0.9022708319932765
+        },
+        "mistralai/mistral-small-3.1-24b-instruct": {
+            "matches": 72,
+            "exact_score_accuracy": 0.09722222222222222,
+            "goal_mae": 0.9236111111111112,
+            "goal_difference_mae": 1.375,
+            "outcome_accuracy": 0.5833333333333334,
+            "brier_score": 0.53855,
+            "log_loss": 0.9137832237527621
+        },
+        "openai/gpt-oss-120b": {
+            "matches": 72,
+            "exact_score_accuracy": 0.08333333333333333,
+            "goal_mae": 0.9583333333333334,
+            "goal_difference_mae": 1.3055555555555556,
+            "outcome_accuracy": 0.6111111111111112,
+            "brier_score": 0.5226738611111111,
+            "log_loss": 0.8838701613277917
+        },
+        "openai/gpt-oss-20b": {
+            "matches": 72,
+            "exact_score_accuracy": 0.1111111111111111,
+            "goal_mae": 0.9375,
+            "goal_difference_mae": 1.2638888888888888,
+            "outcome_accuracy": 0.6527777777777778,
+            "brier_score": 0.5054888888888889,
+            "log_loss": 0.8491244088799164
+        },
+        "qwen/qwen3-30b-a3b-fp8": {
+            "matches": 72,
+            "exact_score_accuracy": 0.125,
+            "goal_mae": 0.9722222222222222,
+            "goal_difference_mae": 1.2777777777777777,
+            "outcome_accuracy": 0.6666666666666666,
+            "brier_score": 0.519511111111111,
+            "log_loss": 0.8823696842500723
+        }
+    },
+    "knockout": {
+        "aisingapore/gemma-sea-lion-v4-27b-it": {
+            "matches": 30,
+            "exact_score_accuracy": 0.23333333333333334,
+            "goal_mae": 0.6166666666666667,
+            "goal_difference_mae": 0.7,
+            "outcome_accuracy": 0.9,
+            "brier_score": 0.30369333333333337,
+            "log_loss": 0.48573443313635317
+        },
+        "meta/llama-3.1-8b-instruct-fast": {
+            "matches": 30,
+            "exact_score_accuracy": 0.1,
+            "goal_mae": 0.85,
+            "goal_difference_mae": 1.3,
+            "outcome_accuracy": 0.7,
+            "brier_score": 0.4281933333333333,
+            "log_loss": 1.6707536015558375
+        },
+        "meta/llama-3.2-3b-instruct": {
+            "matches": 30,
+            "exact_score_accuracy": 0.03333333333333333,
+            "goal_mae": 1.0166666666666666,
+            "goal_difference_mae": 1.1,
+            "outcome_accuracy": 0.7,
+            "brier_score": 0.7150000000000001,
+            "log_loss": 2.0428925610402646
+        },
+        "meta/llama-4-scout-17b-16e-instruct": {
+            "matches": 30,
+            "exact_score_accuracy": 0.2,
+            "goal_mae": 0.6833333333333333,
+            "goal_difference_mae": 0.7666666666666667,
+            "outcome_accuracy": 0.8666666666666667,
+            "brier_score": 0.34388880000000005,
+            "log_loss": 0.5311487881650087
+        },
+        "mistralai/mistral-small-3.1-24b-instruct": {
+            "matches": 30,
+            "exact_score_accuracy": 0.3,
+            "goal_mae": 0.5833333333333334,
+            "goal_difference_mae": 0.7,
+            "outcome_accuracy": 0.8333333333333334,
+            "brier_score": 0.33272666666666656,
+            "log_loss": 0.5163587061448289
+        },
+        "openai/gpt-oss-120b": {
+            "matches": 30,
+            "exact_score_accuracy": 0.2,
+            "goal_mae": 0.6666666666666666,
+            "goal_difference_mae": 0.8666666666666667,
+            "outcome_accuracy": 0.8666666666666667,
+            "brier_score": 0.2950933333333333,
+            "log_loss": 0.465752509934789
+        },
+        "openai/gpt-oss-20b": {
+            "matches": 30,
+            "exact_score_accuracy": 0.13333333333333333,
+            "goal_mae": 0.65,
+            "goal_difference_mae": 0.9666666666666667,
+            "outcome_accuracy": 0.8666666666666667,
+            "brier_score": 0.2964200000000001,
+            "log_loss": 0.46515066954622103
+        },
+        "qwen/qwen3-30b-a3b-fp8": {
+            "matches": 30,
+            "exact_score_accuracy": 0.2,
+            "goal_mae": 0.7,
+            "goal_difference_mae": 0.7333333333333333,
+            "outcome_accuracy": 0.9,
+            "brier_score": 0.323315,
+            "log_loss": 0.5055422947843113
+        }
+    },
+    "overall": {
+        "aisingapore/gemma-sea-lion-v4-27b-it": {
+            "matches": 102,
+            "exact_score_accuracy": 0.1568627450980392,
+            "goal_mae": 0.8186274509803921,
+            "goal_difference_mae": 1.0686274509803921,
+            "outcome_accuracy": 0.7058823529411765,
+            "brier_score": 0.442456862745098,
+            "log_loss": 0.7414654872249026
+        },
+        "meta/llama-3.1-8b-instruct-fast": {
+            "matches": 102,
+            "exact_score_accuracy": 0.09803921568627451,
+            "goal_mae": 0.9362745098039216,
+            "goal_difference_mae": 1.3627450980392157,
+            "outcome_accuracy": 0.5588235294117647,
+            "brier_score": 0.506927862745098,
+            "log_loss": 1.1288823627435778
+        },
+        "meta/llama-3.2-3b-instruct": {
+            "matches": 102,
+            "exact_score_accuracy": 0.09803921568627451,
+            "goal_mae": 1.0392156862745099,
+            "goal_difference_mae": 1.4705882352941178,
+            "outcome_accuracy": 0.4117647058823529,
+            "brier_score": 0.6200705882352942,
+            "log_loss": 1.279271455167052
+        },
+        "meta/llama-4-scout-17b-16e-instruct": {
+            "matches": 102,
+            "exact_score_accuracy": 0.14705882352941177,
+            "goal_mae": 0.8333333333333334,
+            "goal_difference_mae": 1.0588235294117647,
+            "outcome_accuracy": 0.7450980392156863,
+            "brier_score": 0.47822807843137255,
+            "log_loss": 0.793117289690845
+        },
+        "mistralai/mistral-small-3.1-24b-instruct": {
+            "matches": 102,
+            "exact_score_accuracy": 0.1568627450980392,
+            "goal_mae": 0.8235294117647058,
+            "goal_difference_mae": 1.1764705882352942,
+            "outcome_accuracy": 0.6568627450980392,
+            "brier_score": 0.47801372549019605,
+            "log_loss": 0.7968936597504289
+        },
+        "openai/gpt-oss-120b": {
+            "matches": 102,
+            "exact_score_accuracy": 0.11764705882352941,
+            "goal_mae": 0.8725490196078431,
+            "goal_difference_mae": 1.1764705882352942,
+            "outcome_accuracy": 0.6862745098039216,
+            "brier_score": 0.45573841176470603,
+            "log_loss": 0.7608943815063203
+        },
+        "openai/gpt-oss-20b": {
+            "matches": 102,
+            "exact_score_accuracy": 0.11764705882352941,
+            "goal_mae": 0.8529411764705882,
+            "goal_difference_mae": 1.1764705882352942,
+            "outcome_accuracy": 0.7156862745098039,
+            "brier_score": 0.4439980392156862,
+            "log_loss": 0.7361909561347119
+        },
+        "qwen/qwen3-30b-a3b-fp8": {
+            "matches": 102,
+            "exact_score_accuracy": 0.14705882352941177,
+            "goal_mae": 0.8921568627450981,
+            "goal_difference_mae": 1.1176470588235294,
+            "outcome_accuracy": 0.7352941176470589,
+            "brier_score": 0.46180637254901963,
+            "log_loss": 0.7715380991130839
+        }
+    }
+}
