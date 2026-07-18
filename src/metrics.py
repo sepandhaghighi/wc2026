@@ -175,6 +175,8 @@ def evaluate_prediction(
     phase: str,
     true_score: str,
     predicted_score: str,
+    true_outcome: str,
+    predicted_outcome: str,
     probabilities: dict
 ) -> dict:
     """
@@ -183,6 +185,8 @@ def evaluate_prediction(
     :param phase: Tournament phase.
     :param true_score: Official match score.
     :param predicted_score: Predicted score.
+    :param true_outcome: Official match outcome.
+    :param predicted_outcome: Predicted outcome.
     :param probabilities: Prediction probability dictionary.
     :return: Dictionary containing all evaluation metrics.
     """
@@ -190,7 +194,7 @@ def evaluate_prediction(
         "exact_score_accuracy": exact_score_accuracy(true_score, predicted_score),
         "goal_mae": goal_mae(true_score, predicted_score),
         "goal_difference_mae": goal_difference_mae(true_score, predicted_score),
-        "outcome_accuracy": outcome_accuracy(true_score, predicted_score),
+        "outcome_accuracy": outcome_accuracy(true_outcome, predicted_outcome),
     }
 
     outcome = match_outcome(true_score)

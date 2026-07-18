@@ -24,7 +24,8 @@ def load_ground_truth() -> dict:
 
         ground_truth[match_id] = {
             "phase": match_data["phase"],
-            "score": match_data["score"]
+            "score": match_data["score"],
+            "winner": match_data["winner"],
         }
 
     return ground_truth
@@ -190,6 +191,8 @@ if __name__ == "__main__":
                 phase=official["phase"],
                 true_score=official["score"],
                 predicted_score=prediction["prediction"]["predicted_score"],
+                true_outcome=official["winner"],
+                predicted_outcome=prediction["prediction"]["winner"],
                 probabilities=prediction["prediction"]["probabilities"],
             )
         except Exception as exc:
