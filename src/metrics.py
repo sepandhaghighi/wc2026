@@ -76,15 +76,15 @@ def goal_difference_mae(true_score: str, predicted_score: str) -> float:
     return abs(true_difference - predicted_difference)
 
 
-def outcome_accuracy(true_score: str, predicted_score: str) -> int:
+def outcome_accuracy(true_outcome: str, predicted_outcome: str) -> int:
     """
     Computes whether the predicted match outcome is correct.
 
-    :param true_score: Official match score.
-    :param predicted_score: Predicted score.
+    :param true_outcome: Official match outcome.
+    :param predicted_outcome: Predicted outcome.
     :return: 1 if the predicted outcome matches the official outcome, otherwise 0.
     """
-    return int(match_outcome(true_score) == match_outcome(predicted_score))
+    return int(true_outcome == predicted_outcome)
 
 
 def outcome_to_one_hot(outcome: str) -> List[float]:
