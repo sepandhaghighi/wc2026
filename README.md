@@ -7,9 +7,7 @@
 <a href="https://github.com/sepandhaghighi/wc2026"><img src="https://img.shields.io/github/stars/sepandhaghighi/wc2026.svg?style=social&label=Stars"></a>
 </div>
 
-## Overview	
-
-## Overview	
+## Overview
 
 This project benchmarks Large Language Models (LLMs) on FIFA World Cup 2026 match prediction tasks.
 Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) and stored together with their complete inference sessions for reproducibility and later analysis.
