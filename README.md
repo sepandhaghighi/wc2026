@@ -7,10 +7,12 @@
 <a href="https://github.com/sepandhaghighi/wc2026"><img src="https://img.shields.io/github/stars/sepandhaghighi/wc2026.svg?style=social&label=Stars"></a>
 </div>
 
-## Overview	
+## Overview
 
 This project benchmarks Large Language Models (LLMs) on FIFA World Cup 2026 match prediction tasks.
 Each model receives the same information, including recent international results, FIFA rankings, confederation data, tournament stage, and host country. Predictions are generated through [Cloudflare Workers AI](https://www.cloudflare.com/products/workers-ai/) and stored together with their complete inference sessions for reproducibility and later analysis.
+
+The benchmark includes an evaluation pipeline that compares model predictions against official match results and generates detailed performance metrics and leaderboard rankings across different tournament stages.
 
 ## Getting Started
 
@@ -55,6 +57,8 @@ Additional Workers AI models can be added by extending `MODEL_LIST` in `src/para
 
 This project plays out one match at a time, asking a handful of language models to predict each result. Every model sees the same prompt and the same data, so their predictions line up cleanly for comparison. To keep that reasoning grounded, each team's recent form is drawn from real international match history and paired with its FIFA ranking and confederation. The models' answers are saved alongside the full conversation that produced them, so every prediction stays easy to analyze and trace back.
 
+The benchmark also includes an evaluation pipeline that measures prediction quality using multiple statistical metrics and generates comparable leaderboards across models and tournament stages.
+
 - ⚽ Supports both group-stage and knockout-stage matches
 - 🤖 Evaluates multiple LLMs under identical conditions
 - 📈 Uses recent international match history to estimate team form
@@ -62,6 +66,8 @@ This project plays out one match at a time, asking a handful of language models 
 - 🌎 Includes host-country context
 - 🧾 Produces structured JSON predictions
 - 💾 Stores complete Memor sessions for reproducibility
+- 📊 Evaluates predictions using multiple accuracy and calibration metrics
+- 🏅 Generates leaderboard rankings across models
 - 🔁 Allows repeated experiments with different models and matches
 
 ## Prediction Schema
@@ -131,6 +137,30 @@ python src/run.py
 The script downloads historical international results, computes team form statistics, queries each configured model, and saves both predictions and inference sessions.
 
 
+## Evaluation
+
+The benchmark includes an evaluation pipeline that compares generated predictions with official match results and calculates performance metrics for each model.
+
+Run:
+
+```bash
+python src/evaluate.py
+```
+
+The evaluator processes all prediction files stored in `data/predictions/` and produces match-level and model-level evaluation results.
+
+### Evaluation Metrics
+
+The benchmark reports:
+
+- **Outcome Accuracy** - Percentage of correctly predicted match outcomes.
+- **Exact Score Accuracy** - Percentage of predictions matching the final score exactly.
+- **Goal MAE** - Mean absolute error between predicted and actual goals.
+- **Goal Difference MAE** - Mean absolute error between predicted and actual goal differences.
+- **Brier Score** - Measures the quality of predicted outcome probabilities (lower is better).
+- **Log Loss** - Measures probability calibration quality (lower is better).
+
+
 ## Project Structure
 
 When you run the benchmark, it fills in `data/`. Results are grouped first by model and then by match, so it's easy to find a single prediction or compare the same match across models:
@@ -138,19 +168,25 @@ When you run the benchmark, it fills in `data/`. Results are grouped first by mo
 ```text
 .
 ├── src/                          # source code
-│   ├── run.py                    # the script that runs the benchmark
+│   ├── run.py                    # runs benchmark predictions
+│   ├── evaluate.py               # evaluates stored predictions
+│   ├── metrics.py                # evaluation metrics
 │   ├── params.py                 # constants, enums, global paths
-│   ├── utils.py                  # functions
+│   ├── utils.py                  # helper functions
 │   └── validators.py             # prediction validation functions and consistency checks
-├── data/                         # data
+├── data/
 │   ├── matches.json              # official WC2026 results
 │   ├── teams.json                # team names, FIFA rankings, and confederations
 │   ├── predictions/
 │   │   └── <model_name>/
-│   │       └── <match_id>.json   # what the model predicted
-│   └── sessions/
-│       └── <model_name>/
-│           └── <match_id>.json   # the prompt and reply that produced it
+│   │       └── <match_id>.json   # model prediction output
+│   ├── sessions/
+│   │   └── <model_name>/
+│   │       └── <match_id>.json   # full inference session
+│   └── evaluation/
+│       ├── metrics.json          # aggregated benchmark metrics
+│       ├── per_match.csv         # match-level metrics
+│       └── leaderboard.md        # leaderboard tables
 ├── requirements.txt
 └── README.md
 ```
