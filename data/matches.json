@@ -1327,13 +1327,13 @@
     },
     "M103": {
         "phase": "knockout",
-        "round": "",
-        "date": "",
+        "round": "third-place",
+        "date": "2026-07-19",
         "team_a": "France",
         "team_b": "England",
         "host_country": "United States",
-        "score": "",
-        "winner": "",
+        "score": "4-6",
+        "winner": "England",
         "ended_in_extra_time": false,
         "ended_in_penalties": false,
         "penalty_shootout_score": null

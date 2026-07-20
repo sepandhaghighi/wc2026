@@ -12,6 +12,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.125,0.2876820724517809,M100,aisingapore/gemma-sea-lion-v4-27b-it
 0,0.5,1,1,0.4608,0.6539264674066639,M101,aisingapore/gemma-sea-lion-v4-27b-it
 1,0.0,0,1,0.3528,0.5447271754416722,M102,aisingapore/gemma-sea-lion-v4-27b-it
+0,3.5,3,0,0.6050000000000001,0.7985076962177716,M103,aisingapore/gemma-sea-lion-v4-27b-it
 0,0.5,1,0,0.5768,0.9675840262617056,M11,aisingapore/gemma-sea-lion-v4-27b-it
 0,1.5,3,1,0.5054000000000001,0.8675005677047231,M12,aisingapore/gemma-sea-lion-v4-27b-it
 0,2.0,2,0,1.535,2.3025850929940455,M13,aisingapore/gemma-sea-lion-v4-27b-it
@@ -114,6 +115,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.1458,0.31471074483970024,M100,meta/llama-3.1-8b-instruct-fast
 0,1.5,3,0,1.0657999999999999,1.3093333199837622,M101,meta/llama-3.1-8b-instruct-fast
 0,1.0,2,1,0.0,9.992007221626415e-16,M102,meta/llama-3.1-8b-instruct-fast
+0,3.5,3,0,0.7688,0.9675840262617056,M103,meta/llama-3.1-8b-instruct-fast
 0,0.5,1,0,0.5048000000000001,0.8675005677047231,M11,meta/llama-3.1-8b-instruct-fast
 0,2.0,4,0,0.49140000000000006,0.843970070294529,M12,meta/llama-3.1-8b-instruct-fast
 0,1.5,1,0,0.9463999999999999,1.3470736479666092,M13,meta/llama-3.1-8b-instruct-fast
@@ -216,6 +218,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,1.5,3,0,0.045000000000000005,0.16251892949777494,M100,meta/llama-3.2-3b-instruct
 0,1.0,2,1,1.4449999999999998,1.8971199848858813,M101,meta/llama-3.2-3b-instruct
 0,1.0,0,1,1.9999999999999996,34.538776394910684,M102,meta/llama-3.2-3b-instruct
+0,4.5,1,1,1.4449999999999998,1.8971199848858813,M103,meta/llama-3.2-3b-instruct
 0,0.5,1,0,0.33499999999999996,0.5978370007556204,M11,meta/llama-3.2-3b-instruct
 0,2.0,4,0,0.49140000000000006,0.843970070294529,M12,meta/llama-3.2-3b-instruct
 0,1.0,0,1,0.7350000000000001,1.0498221244986778,M13,meta/llama-3.2-3b-instruct
@@ -318,6 +321,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.2888,0.4780358009429998,M100,meta/llama-4-scout-17b-16e-instruct
 0,0.5,1,1,0.3528,0.5447271754416722,M101,meta/llama-4-scout-17b-16e-instruct
 1,0.0,0,1,0.354482,0.5464528014091419,M102,meta/llama-4-scout-17b-16e-instruct
+0,3.5,3,0,0.6728000000000001,0.8675005677047231,M103,meta/llama-4-scout-17b-16e-instruct
 0,0.5,1,0,0.5064000000000001,0.8675005677047231,M11,meta/llama-4-scout-17b-16e-instruct
 0,1.5,3,1,0.5064000000000001,0.8675005677047231,M12,meta/llama-4-scout-17b-16e-instruct
 0,1.0,2,0,1.1474,1.5606477482646683,M13,meta/llama-4-scout-17b-16e-instruct
@@ -420,6 +424,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.24499999999999997,0.4307829160924542,M100,mistralai/mistral-small-3.1-24b-instruct
 0,0.5,1,1,0.40499999999999997,0.5978370007556204,M101,mistralai/mistral-small-3.1-24b-instruct
 1,0.0,0,1,0.24499999999999997,0.4307829160924542,M102,mistralai/mistral-small-3.1-24b-instruct
+0,4.0,2,0,0.6050000000000001,0.7985076962177716,M103,mistralai/mistral-small-3.1-24b-instruct
 0,0.5,1,0,0.635,1.0498221244986778,M11,mistralai/mistral-small-3.1-24b-instruct
 0,2.0,4,0,0.635,1.0498221244986778,M12,mistralai/mistral-small-3.1-24b-instruct
 0,1.5,1,0,1.0850000000000002,1.6094379124341003,M13,mistralai/mistral-small-3.1-24b-instruct
@@ -522,6 +527,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.07219999999999999,0.21072103131565253,M100,openai/gpt-oss-120b
 0,0.5,1,1,0.3528,0.5447271754416722,M101,openai/gpt-oss-120b
 1,0.0,0,1,0.23120000000000002,0.4155154439616658,M102,openai/gpt-oss-120b
+0,3.5,3,0,0.5618000000000001,0.7550225842780328,M103,openai/gpt-oss-120b
 0,0.5,1,0,0.845,1.3862943611198906,M11,openai/gpt-oss-120b
 0,1.5,3,1,0.4601179999999999,0.8051966843685682,M12,openai/gpt-oss-120b
 0,1.0,2,0,1.5002,2.2072749131897207,M13,openai/gpt-oss-120b
@@ -624,6 +630,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.0968,0.2484613592984996,M100,openai/gpt-oss-20b
 0,0.5,1,1,0.4608,0.6539264674066639,M101,openai/gpt-oss-20b
 0,1.0,0,1,0.32000000000000006,0.5108256237659907,M102,openai/gpt-oss-20b
+0,3.5,3,0,0.6728000000000001,0.8675005677047231,M103,openai/gpt-oss-20b
 0,1.0,0,1,0.7349999999999999,1.2039728043259361,M11,openai/gpt-oss-20b
 0,1.5,3,1,0.45500000000000007,0.7985076962177716,M12,openai/gpt-oss-20b
 0,1.5,3,0,1.535,2.3025850929940455,M13,openai/gpt-oss-20b
@@ -726,6 +733,7 @@ exact_score_accuracy,goal_mae,goal_difference_mae,outcome_accuracy,brier_score,l
 0,0.5,1,1,0.15680000000000002,0.3285040669720361,M100,qwen/qwen3-30b-a3b-fp8
 0,0.5,1,1,0.40499999999999997,0.5978370007556204,M101,qwen/qwen3-30b-a3b-fp8
 1,0.0,0,1,0.40499999999999997,0.5978370007556204,M102,qwen/qwen3-30b-a3b-fp8
+0,4.5,3,0,0.5408000000000001,0.7339691750802004,M103,qwen/qwen3-30b-a3b-fp8
 0,0.5,1,0,0.635,1.0498221244986778,M11,qwen/qwen3-30b-a3b-fp8
 0,1.5,3,1,0.5399999999999999,0.916290731874155,M12,qwen/qwen3-30b-a3b-fp8
 0,1.5,1,0,1.295,1.8971199848858813,M13,qwen/qwen3-30b-a3b-fp8

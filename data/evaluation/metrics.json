@@ -75,150 +75,150 @@
     },
     "knockout": {
         "aisingapore/gemma-sea-lion-v4-27b-it": {
-            "matches": 30,
-            "exact_score_accuracy": 0.23333333333333334,
-            "goal_mae": 0.6166666666666667,
-            "goal_difference_mae": 0.7,
-            "outcome_accuracy": 0.9,
-            "brier_score": 0.30369333333333337,
-            "log_loss": 0.48573443313635317
+            "matches": 31,
+            "exact_score_accuracy": 0.22580645161290322,
+            "goal_mae": 0.7096774193548387,
+            "goal_difference_mae": 0.7741935483870968,
+            "outcome_accuracy": 0.8709677419354839,
+            "brier_score": 0.3134129032258065,
+            "log_loss": 0.49582389323575377
         },
         "meta/llama-3.1-8b-instruct-fast": {
-            "matches": 30,
-            "exact_score_accuracy": 0.1,
-            "goal_mae": 0.85,
-            "goal_difference_mae": 1.3,
-            "outcome_accuracy": 0.7,
-            "brier_score": 0.4281933333333333,
-            "log_loss": 1.6707536015558375
+            "matches": 31,
+            "exact_score_accuracy": 0.0967741935483871,
+            "goal_mae": 0.9354838709677419,
+            "goal_difference_mae": 1.3548387096774193,
+            "outcome_accuracy": 0.6774193548387096,
+            "brier_score": 0.4391806451612903,
+            "log_loss": 1.64807071203022
         },
         "meta/llama-3.2-3b-instruct": {
-            "matches": 30,
-            "exact_score_accuracy": 0.03333333333333333,
-            "goal_mae": 1.0166666666666666,
-            "goal_difference_mae": 1.1,
-            "outcome_accuracy": 0.7,
-            "brier_score": 0.7150000000000001,
-            "log_loss": 2.0428925610402646
+            "matches": 31,
+            "exact_score_accuracy": 0.03225806451612903,
+            "goal_mae": 1.1290322580645162,
+            "goal_difference_mae": 1.096774193548387,
+            "outcome_accuracy": 0.7096774193548387,
+            "brier_score": 0.7385483870967743,
+            "log_loss": 2.0381902198739943
         },
         "meta/llama-4-scout-17b-16e-instruct": {
-            "matches": 30,
-            "exact_score_accuracy": 0.2,
-            "goal_mae": 0.6833333333333333,
-            "goal_difference_mae": 0.7666666666666667,
-            "outcome_accuracy": 0.8666666666666667,
-            "brier_score": 0.34388880000000005,
-            "log_loss": 0.5311487881650087
+            "matches": 31,
+            "exact_score_accuracy": 0.1935483870967742,
+            "goal_mae": 0.7741935483870968,
+            "goal_difference_mae": 0.8387096774193549,
+            "outcome_accuracy": 0.8387096774193549,
+            "brier_score": 0.35449883870967747,
+            "log_loss": 0.5419988455695156
         },
         "mistralai/mistral-small-3.1-24b-instruct": {
-            "matches": 30,
-            "exact_score_accuracy": 0.3,
-            "goal_mae": 0.5833333333333334,
-            "goal_difference_mae": 0.7,
-            "outcome_accuracy": 0.8333333333333334,
-            "brier_score": 0.33272666666666656,
-            "log_loss": 0.5163587061448289
+            "matches": 31,
+            "exact_score_accuracy": 0.2903225806451613,
+            "goal_mae": 0.6935483870967742,
+            "goal_difference_mae": 0.7419354838709677,
+            "outcome_accuracy": 0.8064516129032258,
+            "brier_score": 0.3415096774193547,
+            "log_loss": 0.5254602864697626
         },
         "openai/gpt-oss-120b": {
-            "matches": 30,
-            "exact_score_accuracy": 0.2,
-            "goal_mae": 0.6666666666666666,
-            "goal_difference_mae": 0.8666666666666667,
-            "outcome_accuracy": 0.8666666666666667,
-            "brier_score": 0.2950933333333333,
-            "log_loss": 0.465752509934789
+            "matches": 31,
+            "exact_score_accuracy": 0.1935483870967742,
+            "goal_mae": 0.7580645161290323,
+            "goal_difference_mae": 0.9354838709677419,
+            "outcome_accuracy": 0.8387096774193549,
+            "brier_score": 0.30369677419354835,
+            "log_loss": 0.47508380265553884
         },
         "openai/gpt-oss-20b": {
-            "matches": 30,
-            "exact_score_accuracy": 0.13333333333333333,
-            "goal_mae": 0.65,
-            "goal_difference_mae": 0.9666666666666667,
-            "outcome_accuracy": 0.8666666666666667,
-            "brier_score": 0.2964200000000001,
-            "log_loss": 0.46515066954622103
+            "matches": 31,
+            "exact_score_accuracy": 0.12903225806451613,
+            "goal_mae": 0.7419354838709677,
+            "goal_difference_mae": 1.032258064516129,
+            "outcome_accuracy": 0.8387096774193549,
+            "brier_score": 0.30856129032258073,
+            "log_loss": 0.4781296985190759
         },
         "qwen/qwen3-30b-a3b-fp8": {
-            "matches": 30,
-            "exact_score_accuracy": 0.2,
-            "goal_mae": 0.7,
-            "goal_difference_mae": 0.7333333333333333,
-            "outcome_accuracy": 0.9,
-            "brier_score": 0.323315,
-            "log_loss": 0.5055422947843113
+            "matches": 31,
+            "exact_score_accuracy": 0.1935483870967742,
+            "goal_mae": 0.8225806451612904,
+            "goal_difference_mae": 0.8064516129032258,
+            "outcome_accuracy": 0.8709677419354839,
+            "brier_score": 0.3303306451612903,
+            "log_loss": 0.512910903826114
         }
     },
     "overall": {
         "aisingapore/gemma-sea-lion-v4-27b-it": {
-            "matches": 102,
-            "exact_score_accuracy": 0.1568627450980392,
-            "goal_mae": 0.8186274509803921,
-            "goal_difference_mae": 1.0686274509803921,
-            "outcome_accuracy": 0.7058823529411765,
-            "brier_score": 0.442456862745098,
-            "log_loss": 0.7414654872249026
+            "matches": 103,
+            "exact_score_accuracy": 0.1553398058252427,
+            "goal_mae": 0.8446601941747572,
+            "goal_difference_mae": 1.087378640776699,
+            "outcome_accuracy": 0.6990291262135923,
+            "brier_score": 0.44403495145631067,
+            "log_loss": 0.7420192950792024
         },
         "meta/llama-3.1-8b-instruct-fast": {
-            "matches": 102,
-            "exact_score_accuracy": 0.09803921568627451,
-            "goal_mae": 0.9362745098039216,
-            "goal_difference_mae": 1.3627450980392157,
-            "outcome_accuracy": 0.5588235294117647,
-            "brier_score": 0.506927862745098,
-            "log_loss": 1.1288823627435778
+            "matches": 103,
+            "exact_score_accuracy": 0.0970873786407767,
+            "goal_mae": 0.9611650485436893,
+            "goal_difference_mae": 1.3786407766990292,
+            "outcome_accuracy": 0.5533980582524272,
+            "brier_score": 0.5094703106796117,
+            "log_loss": 1.1273163594767637
         },
         "meta/llama-3.2-3b-instruct": {
-            "matches": 102,
-            "exact_score_accuracy": 0.09803921568627451,
-            "goal_mae": 1.0392156862745099,
-            "goal_difference_mae": 1.4705882352941178,
-            "outcome_accuracy": 0.4117647058823529,
-            "brier_score": 0.6200705882352942,
-            "log_loss": 1.279271455167052
+            "matches": 103,
+            "exact_score_accuracy": 0.0970873786407767,
+            "goal_mae": 1.0728155339805825,
+            "goal_difference_mae": 1.4660194174757282,
+            "outcome_accuracy": 0.4174757281553398,
+            "brier_score": 0.6280796116504854,
+            "log_loss": 1.285269984581798
         },
         "meta/llama-4-scout-17b-16e-instruct": {
-            "matches": 102,
-            "exact_score_accuracy": 0.14705882352941177,
-            "goal_mae": 0.8333333333333334,
-            "goal_difference_mae": 1.0588235294117647,
-            "outcome_accuracy": 0.7450980392156863,
-            "brier_score": 0.47822807843137255,
-            "log_loss": 0.793117289690845
+            "matches": 103,
+            "exact_score_accuracy": 0.14563106796116504,
+            "goal_mae": 0.8592233009708737,
+            "goal_difference_mae": 1.0776699029126213,
+            "outcome_accuracy": 0.7378640776699029,
+            "brier_score": 0.48011712621359226,
+            "log_loss": 0.7938394574385526
         },
         "mistralai/mistral-small-3.1-24b-instruct": {
-            "matches": 102,
-            "exact_score_accuracy": 0.1568627450980392,
-            "goal_mae": 0.8235294117647058,
-            "goal_difference_mae": 1.1764705882352942,
-            "outcome_accuracy": 0.6568627450980392,
-            "brier_score": 0.47801372549019605,
-            "log_loss": 0.7968936597504289
+            "matches": 103,
+            "exact_score_accuracy": 0.1553398058252427,
+            "goal_mae": 0.8543689320388349,
+            "goal_difference_mae": 1.1844660194174756,
+            "outcome_accuracy": 0.6504854368932039,
+            "brier_score": 0.4792466019417475,
+            "log_loss": 0.7969093300073934
         },
         "openai/gpt-oss-120b": {
-            "matches": 102,
-            "exact_score_accuracy": 0.11764705882352941,
-            "goal_mae": 0.8725490196078431,
-            "goal_difference_mae": 1.1764705882352942,
-            "outcome_accuracy": 0.6862745098039216,
-            "brier_score": 0.45573841176470603,
-            "log_loss": 0.7608943815063203
+            "matches": 103,
+            "exact_score_accuracy": 0.11650485436893204,
+            "goal_mae": 0.8980582524271845,
+            "goal_difference_mae": 1.1941747572815533,
+            "outcome_accuracy": 0.6796116504854369,
+            "brier_score": 0.45676813592233023,
+            "log_loss": 0.7608373737662399
         },
         "openai/gpt-oss-20b": {
-            "matches": 102,
-            "exact_score_accuracy": 0.11764705882352941,
-            "goal_mae": 0.8529411764705882,
-            "goal_difference_mae": 1.1764705882352942,
-            "outcome_accuracy": 0.7156862745098039,
-            "brier_score": 0.4439980392156862,
-            "log_loss": 0.7361909561347119
+            "matches": 103,
+            "exact_score_accuracy": 0.11650485436893204,
+            "goal_mae": 0.8786407766990292,
+            "goal_difference_mae": 1.1941747572815533,
+            "outcome_accuracy": 0.7087378640776699,
+            "brier_score": 0.4462194174757281,
+            "log_loss": 0.7374658067324789
         },
         "qwen/qwen3-30b-a3b-fp8": {
-            "matches": 102,
-            "exact_score_accuracy": 0.14705882352941177,
-            "goal_mae": 0.8921568627450981,
-            "goal_difference_mae": 1.1176470588235294,
-            "outcome_accuracy": 0.7352941176470589,
-            "brier_score": 0.46180637254901963,
-            "log_loss": 0.7715380991130839
+            "matches": 103,
+            "exact_score_accuracy": 0.14563106796116504,
+            "goal_mae": 0.9271844660194175,
+            "goal_difference_mae": 1.1359223300970873,
+            "outcome_accuracy": 0.7281553398058253,
+            "brier_score": 0.46257330097087385,
+            "log_loss": 0.7711733522778131
         }
     }
 }
