@@ -173,7 +173,8 @@ When you run the benchmark, it fills in `data/`. Results are grouped first by mo
 │   ├── metrics.py                # evaluation metrics
 │   ├── params.py                 # constants, enums, global paths
 │   ├── utils.py                  # helper functions
-│   └── validators.py             # prediction validation functions and consistency checks
+│   ├── validate.py               # validate predictions
+│   └── validators.py             # prediction validation functions
 ├── data/
 │   ├── matches.json              # official WC2026 results
 │   ├── teams.json                # team names, FIFA rankings, and confederations
