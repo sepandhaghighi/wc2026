@@ -170,10 +170,10 @@ When you run the benchmark, it fills in `data/`. Results are grouped first by mo
 ├── src/                          # source code
 │   ├── run.py                    # runs benchmark predictions
 │   ├── evaluate.py               # evaluates stored predictions
+│   ├── validate.py               # validates stored predictions
 │   ├── metrics.py                # evaluation metrics
 │   ├── params.py                 # constants, enums, global paths
 │   ├── utils.py                  # helper functions
-│   ├── validate.py               # validate predictions
 │   └── validators.py             # prediction validation functions
 ├── data/
 │   ├── matches.json              # official WC2026 results
