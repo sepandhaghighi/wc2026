@@ -1340,14 +1340,14 @@
     },
     "M104": {
         "phase": "knockout",
-        "round": "",
-        "date": "",
+        "round": "final",
+        "date": "2026-07-19",
         "team_a": "Spain",
         "team_b": "Argentina",
         "host_country": "United States",
-        "score": "",
-        "winner": "",
-        "ended_in_extra_time": false,
+        "score": "1-0",
+        "winner": "Spain",
+        "ended_in_extra_time": true,
         "ended_in_penalties": false,
         "penalty_shootout_score": null
     }
