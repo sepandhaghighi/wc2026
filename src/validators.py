@@ -73,19 +73,13 @@ def validate_score_winner_alignment(
     home_score, away_score = parse_score(predicted_score)
 
     if home_score > away_score and predicted_winner != team_a:
-        errors.append(
-            "Predicted score indicates Team A victory but predicted_winner does not match."
-        )
+        errors.append("Predicted score indicates Team A victory but predicted_winner does not match.")
     elif away_score > home_score and predicted_winner != team_b:
-        errors.append(
-            "Predicted score indicates Team B victory but predicted_winner does not match."
-        )
+        errors.append("Predicted score indicates Team B victory but predicted_winner does not match.")
 
     if phase == "group":
         if home_score == away_score and predicted_winner != "Draw":
-            errors.append(
-                "Predicted score indicates a draw but predicted_winner is inconsistent."
-            )
+            errors.append("Predicted score indicates a draw but predicted_winner is inconsistent.")
 
     return errors
 
@@ -162,10 +156,7 @@ def validate_structure(data: dict) -> list[str]:
             if "top_p" in hp and not is_number(hp["top_p"]):
                 errors.append("'top_p' must be numeric.")
 
-            if (
-                "max_tokens" in hp
-                and not isinstance(hp["max_tokens"], int)
-            ):
+            if ("max_tokens" in hp and not isinstance(hp["max_tokens"], int)):
                 errors.append("'max_tokens' must be an integer.")
 
     ctx = data["match_context"]
@@ -253,18 +244,14 @@ def validate_structure(data: dict) -> list[str]:
         missing = required - resolution.keys()
 
         if missing:
-            errors.append(
-                f"knockout_resolution missing keys: {sorted(missing)}"
-            )
+            errors.append(f"knockout_resolution missing keys: {sorted(missing)}")
 
-        if (
-            "ended_in_extra_time" in resolution
+        if ("ended_in_extra_time" in resolution
             and not isinstance(resolution["ended_in_extra_time"], bool)
         ):
             errors.append("'ended_in_extra_time' must be boolean.")
 
-        if (
-            "ended_in_penalties" in resolution
+        if ("ended_in_penalties" in resolution
             and not isinstance(resolution["ended_in_penalties"], bool)
         ):
             errors.append("'ended_in_penalties' must be boolean.")
@@ -275,9 +262,7 @@ def validate_structure(data: dict) -> list[str]:
             penalty_score is not None
             and not isinstance(penalty_score, str)
         ):
-            errors.append(
-                "'penalty_shootout_score' must be a string or null."
-            )
+            errors.append("'penalty_shootout_score' must be a string or null.")
 
     return errors
 
@@ -358,9 +343,7 @@ def validate_semantics(data: dict) -> list[str]:
             errors.append("Group stage cannot end in penalties.")
 
         if penalty_score is not None:
-            errors.append(
-                "Group stage cannot contain penalty_shootout_score."
-            )
+            errors.append("Group stage cannot contain penalty_shootout_score.")
 
     else:
 
@@ -381,9 +364,7 @@ def validate_semantics(data: dict) -> list[str]:
         if penalties:
 
             if not tied:
-                errors.append(
-                    "Penalty shootout requires a tied predicted_score."
-                )
+                errors.append("Penalty shootout requires a tied predicted_score.")
 
             if penalty_score is None:
                 errors.append("Penalty shootout score is missing.")
@@ -391,14 +372,10 @@ def validate_semantics(data: dict) -> list[str]:
         else:
 
             if tied:
-                errors.append(
-                    "Tied predicted_score requires penalties."
-                )
+                errors.append("Tied predicted_score requires penalties.")
 
             if penalty_score is not None:
-                errors.append(
-                    "Penalty shootout score present although penalties=False."
-                )
+                errors.append("Penalty shootout score present although penalties=False.")
 
     return errors
 
