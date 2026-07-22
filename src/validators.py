@@ -1,7 +1,7 @@
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, List, Tuple
 
 
 SCORE_PATTERN = re.compile(r"^\d+-\d+$")
@@ -17,7 +17,7 @@ def is_number(value: Any) -> bool:
     return isinstance(value, (int, float)) and not isinstance(value, bool)
 
 
-def parse_score(score: str) -> tuple[int, int]:
+def parse_score(score: str) -> Tuple[int, int]:
     """
     Parses a football score string into integer goal counts.
 
@@ -34,7 +34,7 @@ def parse_score(score: str) -> tuple[int, int]:
     return team_a, team_b
 
 
-def validate_confidence(confidence: float) -> list[str]:
+def validate_confidence(confidence: float) -> List[str]:
     """
     Validates that confidence is a numeric probability within the closed interval [0, 1].
 
@@ -57,7 +57,7 @@ def validate_score_winner_alignment(
     predicted_score: str,
     predicted_winner: str,
     phase: str,
-) -> list[str]:
+) -> List[str]:
     """
     Validates that the predicted winner is logically consistent with the predicted score.
 
@@ -84,7 +84,7 @@ def validate_score_winner_alignment(
     return errors
 
 
-def validate_structure(data: dict) -> list[str]:
+def validate_structure(data: dict) -> List[str]:
     """
     Validates the structural integrity of a prediction document.
 
@@ -254,7 +254,7 @@ def validate_structure(data: dict) -> list[str]:
     return errors
 
 
-def validate_semantics(data: dict) -> list[str]:
+def validate_semantics(data: dict) -> List[str]:
     """
     Validates the semantic consistency of a prediction document.
 
@@ -367,7 +367,7 @@ def validate_semantics(data: dict) -> list[str]:
     return errors
 
 
-def validate_file(path: Path) -> list[str]:
+def validate_file(path: Path) -> List[str]:
     """
     Validates a prediction file against structural and semantic rules.
 
