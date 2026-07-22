@@ -206,16 +206,10 @@ def validate_structure(data: dict) -> list[str]:
     if "confidence" in pred:
         errors.extend(validate_confidence(pred["confidence"]))
 
-    if (
-        "predicted_score" in pred
-        and not isinstance(pred["predicted_score"], str)
-    ):
+    if ("predicted_score" in pred and not isinstance(pred["predicted_score"], str)):
         errors.append("'predicted_score' must be a string.")
 
-    if (
-        "predicted_winner" in pred
-        and not isinstance(pred["predicted_winner"], str)
-    ):
+    if ("predicted_winner" in pred and not isinstance(pred["predicted_winner"], str)):
         errors.append("'predicted_winner' must be a string.")
 
     probs = pred.get("probabilities")
@@ -246,22 +240,15 @@ def validate_structure(data: dict) -> list[str]:
         if missing:
             errors.append(f"knockout_resolution missing keys: {sorted(missing)}")
 
-        if ("ended_in_extra_time" in resolution
-            and not isinstance(resolution["ended_in_extra_time"], bool)
-        ):
+        if ("ended_in_extra_time" in resolution and not isinstance(resolution["ended_in_extra_time"], bool)):
             errors.append("'ended_in_extra_time' must be boolean.")
 
-        if ("ended_in_penalties" in resolution
-            and not isinstance(resolution["ended_in_penalties"], bool)
-        ):
+        if ("ended_in_penalties" in resolution and not isinstance(resolution["ended_in_penalties"], bool)):
             errors.append("'ended_in_penalties' must be boolean.")
 
         penalty_score = resolution.get("penalty_shootout_score")
 
-        if (
-            penalty_score is not None
-            and not isinstance(penalty_score, str)
-        ):
+        if (penalty_score is not None and not isinstance(penalty_score, str)):
             errors.append("'penalty_shootout_score' must be a string or null.")
 
     return errors
